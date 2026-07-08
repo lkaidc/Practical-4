@@ -1,3 +1,43 @@
-root{
-    padding: 0px;
+:root{
+    --spacing: 30px;
+--nav-spacing: 5px;
+--nav-padding: 15px;
+--shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+--border-radius: 10px;
+--font-main: Arial, sans-serrif;;
+--font-titles: 'Times New Roman', serif;
+}
+*{
+margin: 0;
+padding: 10px;
+box-sizing: border-box;
+}
+[data-theme="light"] {
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --border: #DDE5D2;
+    --text: #1E2415;
+    --text-muted: #5F6D4A;
+    --accent: #8DB255;
+    --accent-alt: #F7F9F2;
+    --shadow: rgba(0, 0, 0, .4);
+    --input-bg: #FFFFFF;
+    --cards: #F7F9F2;
+    --primary-button: #3F5910;
+    --primary-hover: #567A16;
+}
+
+[data-theme="dark"] {
+    --bg: #0E1208;
+    --surface: #242E1A;
+    --border: #364227;
+    --text: #F7F9F2;
+    --text-muted: #567A16;
+    --accent: #8DB255;
+    --accent-alt: #F7F9F2;
+    --shadow: rgba(0, 0, 0, .4);
+    --input-bg: #242E1A;
+    --cards: #1C2413;
+    --primary-button: #3F5910;
+    --primary-hover: #567A16;
 }
