@@ -13,21 +13,23 @@
         }
 
 header {
+    background: var(--surface);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: var(--nav-spacing) var(--spacing);
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    margin-right: auto;
 }
 
 .logo img {
-    width: 60px;
+    width: 70px;
     height: auto;
+}
+
+.logo a {
+    text-decoration: none;
 }
 
 body {
@@ -69,9 +71,12 @@ body {
 }
 
 .navigation {
+    background-color: var(--nav-bg);
+    color: var(--text);
     --nav-bg: var(--accent);
     --nav-text: var(--text);
     --nav-hover: var(--primary-hover);
+    flex: 1;
 }
 
 .navigation ul {
@@ -81,7 +86,7 @@ body {
     gap: 25px;
     margin: 0;
     padding: 0;
-     align-items: center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -97,6 +102,12 @@ body {
     color: var(--text);
     padding: 10px 15px;
     transition: transform 0.3s ease;
+}
+
+.navigation a.active {
+    background: var(--primary-button);
+    color: white;
+    border-radius: var(--border-radius);
 }
 
 .navigation a:hover {
@@ -126,3 +137,65 @@ body {
     gap:var(--spacing);
 }
 
+.main-content{ 
+    background-color: var(--cards); 
+    padding: var(--spacing); 
+    border-radius: var(--border-radius); 
+    box-shadow: var(--shadow); 
+    margin: var(--spacing) auto;
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+    align-items: center;
+    justify-content: center;
+} 
+
+.main-content h1 {
+    
+    font-family: var(--font-titles); 
+    text-align: center; 
+    margin-bottom: var(--spacing);
+    color: var(--text);
+}
+.main-content p {
+    line-height: 1.6;
+    margin-bottom: var(--spacing);
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content h2,
+.main-content h3 { 
+    font-family: var(--font-titles); 
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--spacing);
+    line-height: 1.5;
+}
+
+.banner { 
+    background-color: var(--primary-button); 
+    color: var(--text); 
+    padding: var(--spacing); 
+ 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    align-items: center; 
+} 
+ 
+.banner h1 { 
+    font-size: 3.5rem; 
+    font-family: var(--font-titles); 
+} 
+.footer { 
+    background-color: var(--surface); 
+    color: var(--text-muted); 
+    text-align: center; 
+    padding: var(--spacing); 
+    border-radius: var(--border-radius); 
+    box-shadow: var(--shadow);
+    margin-top: var(--spacing);
+    margin: var(--spacing) auto;
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+} 
