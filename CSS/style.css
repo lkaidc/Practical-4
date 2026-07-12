@@ -270,7 +270,7 @@ body {
                                 margin: 0;
                                 background: transparent;
                                     }
-
+                            .main-content a,
                             .book-categories a {
                                 display: inline-block;
                                 background: #fff;
@@ -281,7 +281,8 @@ body {
                                 text-decoration: none;
                                 transition: transform 0.2s ease, box-shadow 0.2s ease;
                                         }
-
+                            
+                            .main-content a:hover,
                             .book-categories a:hover {
                                 transform: translateY(-2px);
                                 box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
@@ -295,15 +296,7 @@ body {
                             border-radius: var(--border-radius);
 
                                         }
-
-                        .book-categories a:hover {
-                            background-color: var(--primary-hover);
-                            font-weight: bold;
-                            color: var(--text);
-
-                            transform: scale(1.05);
     
-                                        }
                         .book-categories .card-category{
                             display:flex;
                             flex-wrap: wrap;
