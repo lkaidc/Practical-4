@@ -124,24 +124,6 @@ body {
 }
 
 
-.hero-section {
-    background-color: var(--accent-alt);
-    padding: var(--spacing);
-    text-align: center;
-}
-
-.featured-books{
-    display:flex;
-    flex-wrap: wrap;
-    gap:var(--spacing);
-}
-
-.book-categories{
-    display:flex;
-    flex-wrap:wrap;
-    gap:var(--spacing);
-}
-
 .main-content{ 
     background-color: var(--cards); 
     padding: var(--spacing); 
@@ -177,6 +159,110 @@ body {
     margin-top: var(--spacing);
     line-height: 1.5;
 }
+            .hero-section {
+                background-color: var(--accent-alt);
+                padding: var(--spacing);
+                text-align: center;
+                        }
+
+                        .hero-section h1 {
+                            font-size: 3rem;
+                            font-family: var(--font-titles);
+                            margin-bottom: var(--spacing);
+                        }
+                        
+                        .hero-section a{
+                            display: block;
+                            text-decoration: none;
+                            color: var(--text);
+                            padding: 10px 15px;
+                            transition: transform 0.3s ease;
+                        }
+
+                        .hero-section a:hover {
+                            background-color: var(--primary-hover);
+                            font-weight: bold;
+                            color: var(--text);
+
+                            transform: scale(1.05);
+                        }
+
+            .featured-books{
+                display:flex;
+                flex-wrap: wrap;
+                gap:var(--spacing);
+                        }
+
+                        .featured-books .book{
+                            background-color: var(--cards);
+                            padding: var(--spacing);
+                            border-radius: var(--border-radius);
+                            box-shadow: var(--shadow);
+                            text-align: center;
+                        }
+
+            .book-categories{
+                display:flex;
+                flex-wrap:wrap;
+                gap:var(--spacing);
+
+                
+                }
+                        .book-categories ul{
+                            display:flex;
+                            flex-wrap:wrap;
+                            background-color: var(--cards);
+                            padding: var(--spacing);
+                            text-align: center;
+
+                            
+
+                            list-style: none;
+                            text-decoration: none;
+
+                        }
+
+                        .book-categories li{
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        .book-categories a {
+                            display: block;
+                            text-decoration: none;
+                            color: var(--text);
+                            padding: 10px 15px;
+                            transition: transform 0.3s ease;
+                                        }
+
+                            .book-categories a.active {
+                            background: var(--primary-button);
+                            color: white;
+                            border-radius: var(--border-radius);
+
+                                        }
+
+                        .book-categories a:hover {
+                            background-color: var(--primary-hover);
+                            font-weight: bold;
+                            color: var(--text);
+
+                            transform: scale(1.05);
+    
+                                        }
+                        .book-categories .card-category{
+                            display:flex;
+                            flex-wrap: wrap;
+                            background-color: var(--cards);
+
+                            border-radius: var(--border-radius);
+                            box-shadow: var(--shadow);
+                            text-align: center;
+
+                            margin-left: 10px;
+
+                                        }
+
 
 .banner { 
     background-color: var(--primary-button); 
