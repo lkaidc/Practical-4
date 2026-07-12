@@ -77,11 +77,11 @@ body {
 
 .navigation {
     background-color: var(--bg);
-    color: var(--text);
+    color: var(--text-muted);
     --nav-bg: var(--accent);
-    --nav-text: var(--text-muted);
     --nav-hover: var(--primary-hover);
     flex: 1;
+    border-radius: var(--border-radius);
 }
 
             .navigation ul {
@@ -167,6 +167,10 @@ body {
                 background-color: var(--accent-alt);
                 padding: var(--spacing);
                 text-align: center;
+                margin-top: 10px;
+                margin-bottom: 15px;
+                border-radius: var(--border-radius);
+
                         }
 
                         .hero-section h1 {
