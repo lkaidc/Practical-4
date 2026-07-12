@@ -1,17 +1,19 @@
 :root{
-    --spacing: 30px;
---nav-spacing: 5px;
---nav-padding: 15px;
---shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
---border-radius: 10px;
---font-main: Arial, sans-serrif;;
---font-titles: 'Times New Roman', serif;
-}
-*{
-margin: 0;
-padding: 10px;
-box-sizing: border-box;
-}
+        --spacing: 30px;
+        --nav-spacing: 5px;
+        --nav-padding: 15px;
+        --shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        --border-radius: 10px;
+        --font-main: Arial, sans-serrif;;
+        --font-titles: 'Times New Roman', serif;
+    }
+
+    *{
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        }
+
 [data-theme="light"] {
     --bg: #FFFFFF;
     --surface: #FFFFFF;
@@ -40,6 +42,21 @@ box-sizing: border-box;
     --cards: #1C2413;
     --primary-button: #3F5910;
     --primary-hover: #567A16;
+}
+.hero-banner {
+    background-image: url("../images/hero-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo {
+    width: 300px;
+    height: auto;
 }
 
 .navigation {
