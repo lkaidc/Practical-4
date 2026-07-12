@@ -1,18 +1,42 @@
 :root{
         --spacing: 30px;
-        --nav-spacing: 5px;
-        --nav-padding: 15px;
+        --nav-spacing: 20px;
         --shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
         --border-radius: 10px;
-        --font-main: Arial, sans-serrif;;
+        --font-main: Arial, sans-serif;
         --font-titles: 'Times New Roman', serif;
     }
 
     *{
         margin: 0;
-        padding: 10px;
         box-sizing: border-box;
         }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--nav-spacing) var(--spacing);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-main);
+    background: var(--bg);
+    color: var(--text);
+}
 
 [data-theme="light"] {
     --bg: #FFFFFF;
@@ -43,21 +67,6 @@
     --primary-button: #3F5910;
     --primary-hover: #567A16;
 }
-.hero-banner {
-    background-image: url("../images/hero-banner.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-logo {
-    width: 300px;
-    height: auto;
-}
 
 .navigation {
     --nav-bg: var(--accent);
@@ -67,18 +76,30 @@
 
 .navigation ul {
     list-style: none;
-    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+     align-items: center;
+    justify-content: center;
 }
 
 .navigation li {
-    margin-bottom: var(--nav-spacing);
-    padding: var(--nav-padding);
-    border-radius: var(--border-radius);
+    margin: 0;
+    padding: 0;
+}
 
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    padding: 10px 15px;
     transition: transform 0.3s ease;
 }
 
-.navigation li:hover {
+.navigation a:hover {
     background-color: var(--primary-hover);
     font-weight: bold;
     color: var(--text);
@@ -86,10 +107,6 @@
     transform: scale(1.05);
 }
 
-.navigation a {
-    text-decoration: none;
-    color: var(--text);
-}
 
 .hero-section {
     background-color: var(--accent-alt);
