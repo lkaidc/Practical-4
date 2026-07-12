@@ -379,3 +379,161 @@ body {
                     list-style: none;
                     text-decoration: none;
                             }
+
+            /* ==========================
+                    CART PAGE
+            ========================== */
+
+            .cart-container{
+                width:90%;
+                max-width:1200px;
+                margin:40px auto;
+            }
+
+            .cart-container h2{
+                text-align:center;
+                margin-bottom:35px;
+                color:#2f5233;
+            }
+
+            .cart-layout{
+                display:flex;
+                gap:35px;
+                align-items:flex-start;
+            }
+
+            .cart-items{
+                flex:2;
+            }
+
+            .cart-item{
+                display:flex;
+                gap:25px;
+                background:#fff;
+                border-radius:15px;
+                padding:20px;
+                margin-bottom:25px;
+                box-shadow:0 5px 15px rgba(0,0,0,.08);
+            }
+
+            .cart-item img{
+                width:120px;
+                height:170px;
+                object-fit:cover;
+                border-radius:10px;
+            }
+
+            .cart-info{
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+            }
+
+            .cart-info h3{
+                color:#2f5233;
+                margin-bottom:12px;
+            }
+
+            .cart-info p{
+                margin:6px 0;
+            }
+
+            .cart-info h4{
+                margin-top:15px;
+                color:#4b7f52;
+                font-size:24px;
+            }
+
+            .order-summary{
+                flex:1;
+                background:#fff;
+                border-radius:15px;
+                padding:25px;
+                box-shadow:0 5px 15px rgba(0,0,0,.08);
+                position:sticky;
+                top:20px;
+            }
+
+            .order-summary h3{
+                text-align:center;
+                margin-bottom:20px;
+                color:#2f5233;
+            }
+
+            .order-summary hr{
+                border:none;
+                border-top:1px solid #ddd;
+                margin:18px 0;
+            }
+
+            .order-summary p{
+                display:flex;
+                justify-content:space-between;
+                margin:12px 0;
+            }
+
+            .order-summary h2{
+                text-align:center;
+                color:#2f5233;
+                margin:25px 0;
+            }
+
+            .order-summary button{
+                width:100%;
+                padding:14px;
+                border:none;
+                border-radius:8px;
+                cursor:pointer;
+                font-size:16px;
+                font-weight:bold;
+                margin-bottom:15px;
+                transition:.3s;
+            }
+
+            .order-summary button:first-of-type{
+                background:#4f7f52;
+                color:#fff;
+            }
+
+            .order-summary button:first-of-type:hover{
+                background:#39603d;
+            }
+
+            .continue-btn{
+                background:#e8e8e8;
+                color:#333;
+            }
+
+            .continue-btn:hover{
+                background:#d5d5d5;
+            }
+
+            /* Responsive */
+
+            @media(max-width:900px){
+
+                .cart-layout{
+                    flex-direction:column;
+                }
+
+                .order-summary{
+                    width:100%;
+                    position:static;
+                }
+
+            }
+
+            @media(max-width:600px){
+
+                .cart-item{
+                    flex-direction:column;
+                    text-align:center;
+                }
+
+                .cart-item img{
+                    width:160px;
+                    height:auto;
+                    margin:auto;
+                }
+
+            }
