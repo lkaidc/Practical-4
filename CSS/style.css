@@ -26,15 +26,15 @@ header {
     margin-right: var(--spacing);
 }
 
-.logo img {
-    width: 100px;
-    height: auto;
-}
+                .logo img {
+                    width: 100px;
+                    height: auto;
+                        }
 
-.logo a {
-    text-decoration: none;
-    display: block;
-}
+                .logo a {
+                    text-decoration: none;
+                    display: block;
+                        }
 
 
 body {
@@ -84,44 +84,44 @@ body {
     flex: 1;
 }
 
-.navigation ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-}
+            .navigation ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 25px;
+                margin: 0;
+                padding: 0;
+                align-items: center;
+                justify-content: center;
+                    }
 
-.navigation li {
-    margin: 0;
-    padding: 0;
-}
+            .navigation li {
+                margin: 0;
+                padding: 0;
+                    }       
 
 
-.navigation a {
-    display: block;
-    text-decoration: none;
-    color: var(--text);
-    padding: 10px 15px;
-    transition: transform 0.3s ease;
-}
+            .navigation a {
+                display: block;
+                text-decoration: none;
+                color: var(--text);
+                padding: 10px 15px;
+                transition: transform 0.3s ease;
+                    }
 
-.navigation a.active {
-    background: var(--primary-button);
-    color: white;
-    border-radius: var(--border-radius);
-}
+            .navigation a.active {
+                background: var(--primary-button);
+                color: white;
+                border-radius: var(--border-radius);
+                    }
 
-.navigation a:hover {
-    background-color: var(--primary-hover);
-    font-weight: bold;
-    color: var(--text);
+            .navigation a:hover {
+                background-color: var(--primary-hover);
+                font-weight: bold;
+                color: var(--text);
 
-    transform: scale(1.05);
-}
+                transform: scale(1.05);
+                    }
 
 
 .main-content{ 
@@ -137,28 +137,30 @@ body {
     text-align: center;
 } 
 
-.main-content h1 {
+            .main-content h1 {
     
-    font-family: var(--font-titles); 
-    text-align: center; 
-    margin-bottom: var(--spacing);
-    color: var(--text);
-}
-.main-content p {
-    line-height: 1.6;
-    margin-bottom: var(--spacing);
-    align-items: center;
-    text-align: center;
-}
+                font-family: var(--font-titles); 
+                text-align: center; 
+                margin-bottom: var(--spacing);
+                color: var(--text);
+                    }
 
-.main-content h2,
-.main-content h3 { 
-    font-family: var(--font-titles); 
-    align-items: center;
-    justify-content: center;
-    margin-top: var(--spacing);
-    line-height: 1.5;
-}
+            .main-content p {
+                line-height: 1.6;
+                margin-bottom: var(--spacing);
+                align-items: center;
+                text-align: center;
+                    }
+
+            .main-content h2,
+            .main-content h3 { 
+                font-family: var(--font-titles); 
+                align-items: center;
+                justify-content: center;
+                margin-top: var(--spacing);
+                line-height: 1.5;
+                    }
+            
             .hero-section {
                 background-color: var(--accent-alt);
                 padding: var(--spacing);
@@ -275,10 +277,11 @@ body {
     align-items: center; 
 } 
  
-.banner h1 { 
-    font-size: 3.5rem; 
-    font-family: var(--font-titles); 
-} 
+                .banner h1 { 
+                    font-size: 3.5rem; 
+                    font-family: var(--font-titles); 
+                            } 
+
 
 .contact-info   {
     background-color: var(--cards); 
@@ -292,44 +295,44 @@ body {
     text-decoration: none;
 }
 
-.contact-info ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-}
+                .contact-info ul {
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 25px;
+                    margin: 0;
+                    padding: 0;
+                    align-items: center;
+                    justify-content: center;
+                            }
 
-.contact-info li {
-    margin: 0;
-    padding: 0;
-}
+                .contact-info li {
+                    margin: 0;
+                    padding: 0;
+                            }
 
 
-.contact-info a {
-    display: block;
-    text-decoration: none;
-    color: var(--text);
-    padding: 10px 15px;
-    transition: transform 0.3s ease;
-}
+                .contact-info a {
+                    display: block;
+                    text-decoration: none;
+                    color: var(--text);
+                    padding: 10px 15px;
+                    transition: transform 0.3s ease;
+                            }
 
-.contact-info a.active {
-    background: var(--primary-button);
-    color: white;
-    border-radius: var(--border-radius);
-}
+                .contact-info a.active {
+                    background: var(--primary-button);
+                    color: white;
+                    border-radius: var(--border-radius);
+                            }
 
-.contact-info a:hover {
-    background-color: var(--primary-hover);
-    font-weight: bold;
-    color: var(--text);
+                .contact-info a:hover {
+                    background-color: var(--primary-hover);
+                    font-weight: bold;
+                    color: var(--text);
 
-    transform: scale(1.05);
-}
+                    transform: scale(1.05);
+                            }
 
 
 .footer { 
@@ -345,12 +348,12 @@ body {
     margin-right: var(--spacing);
 } 
 
-.footer footer-nav {
-    display: flex;
-    justify-content: center;
-    gap: var(--nav-spacing);
-    margin-top: var(--spacing);
+                .footer footer-nav {
+                    display: flex;
+                    justify-content: center;
+                    gap: var(--nav-spacing);
+                    margin-top: var(--spacing);
 
-    list-style: none;
-    text-decoration: none;
-}
+                    list-style: none;
+                    text-decoration: none;
+                            }
