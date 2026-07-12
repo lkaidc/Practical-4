@@ -3,71 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeafSpace</title>
+    <title>LeafSpace | Shopping Cart</title>
 
     <link rel="stylesheet" href="../../CSS/style.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="logo">
-            <a href="../../index.html">
-                <img src="../../images/logo.png" alt="LeafSpace Logo">
-            </a>
-        </div>
-        <nav class="navigation">
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../books/bookstore.html">Bookstore</a></li>
-                <li><a href="../nav/library.html">Library</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="../profile/profile.html">Profile</a></li>
-                <li><a href="../nav/settings.html">Settings</a></li>
-                <li><a href="../nav/login.html">Login</a></li>
-                <li><a href="../nav/register.html">Register</a></li>
-            </ul>
-        </nav>
+<header>
+
+    <div class="logo">
+        <a href="../../index.html">
+            <img src="../../images/logo.png" alt="LeafSpace Logo">
+        </a>
+    </div>
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../books/bookstore.html">Bookstore</a></li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="../profile/profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
         </ul>
-     </nav>
-    </header>
+    </nav>
 
-    <main>
+</header>
 
-        <h2>Shopping Cart</h2>
+<main class="cart-container">
 
-        <section>
+    <h2>Shopping Cart</h2>
 
-            <article>
-                <h3>The Seven Husbands of Evelyn Hugo</h3>
-                <p><strong>Author:</strong> Taylor Jenkins Reid</p>
-                <p><strong>Price:</strong> ₱899.00</p>
-                <p><strong>Quantity:</strong> 1</p>
+    <div class="cart-layout">
+
+        <section class="cart-items">
+
+            <article class="cart-item">
+
+                <img src="https://m.media-amazon.com/images/M/MV5BYzE1YWU2MDItMTA1ZS00YWZiLWE5ZDgtOWY5YmI0MDI4YWVmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Seven Husbands of Evelyn Hugo">
+
+                <div class="cart-info">
+
+                    <h3>The Seven Husbands of Evelyn Hugo</h3>
+
+                    <p><strong>Author:</strong> Taylor Jenkins Reid</p>
+
+                    <p><strong>Quantity:</strong> 1</p>
+
+                    <h4>₱899.00</h4>
+
+                </div>
+
             </article>
 
-            <article>
-                <h3>Call Me by Your Name</h3>
-                <p><strong>Author:</strong> André Aciman</p>
-                <p><strong>Price:</strong> ₱799.00</p>
-                <p><strong>Quantity:</strong> 1</p>
+            <article class="cart-item">
+
+                <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1519203520i/36336078.jpg" alt="Call Me by Your Name">
+
+                <div class="cart-info">
+
+                    <h3>Call Me by Your Name</h3>
+
+                    <p><strong>Author:</strong> André Aciman</p>
+
+                    <p><strong>Quantity:</strong> 1</p>
+
+                    <h4>₱799.00</h4>
+
+                </div>
+
             </article>
 
         </section>
 
-        <section>
+        <aside class="order-summary">
+
             <h3>Order Summary</h3>
 
-            <p>Total Items: 2</p>
-            <p><strong>Total Amount: ₱1,698.00</strong></p>
+            <hr>
+
+            <p>Total Items <span>2</span></p>
+
+            <p>Subtotal <span>₱1,698.00</span></p>
+
+            <p>Shipping <span>FREE</span></p>
+
+            <hr>
+
+            <h2>Total: ₱1,698.00</h2>
 
             <button>Proceed to Checkout</button>
-            <button>Continue Shopping</button>
-        </section>
 
-    </main>
+            <button class="continue-btn">Continue Shopping</button>
 
-    <footer class="footer">
-        <p>&copy; 2026 LeafSpace. All Rights Reserved.</p>
-    </footer>
+        </aside>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>&copy; 2026 LeafSpace. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
