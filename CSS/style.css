@@ -65,3 +65,47 @@
     --nav-hover: var(--primary-hover);
 }
 
+.navigation ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.navigation li {
+    margin-bottom: var(--nav-spacing);
+    padding: var(--nav-padding);
+    border-radius: var(--border-radius);
+
+    transition: transform 0.3s ease;
+}
+
+.navigation li:hover {
+    background-color: var(--primary-hover);
+    font-weight: bold;
+    color: var(--text);
+
+    transform: scale(1.05);
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.hero-section {
+    background-color: var(--accent-alt);
+    padding: var(--spacing);
+    text-align: center;
+}
+
+.featured-books{
+    display:flex;
+    flex-wrap: wrap;
+    gap:var(--spacing);
+}
+
+.book-categories{
+    display:flex;
+    flex-wrap:wrap;
+    gap:var(--spacing);
+}
+
