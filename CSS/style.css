@@ -726,3 +726,196 @@ body {
                 }
 
                 }
+                
+                /*==================================================
+                    BOOKSTORE
+                ==================================================*/
+
+                .bookstore-hero{
+                    text-align:center;
+                    padding:50px 20px;
+                    margin-bottom:40px;
+                }
+
+                .bookstore-hero h1{
+                    font-size:3rem;
+                    color:#2f5233;
+                    margin-bottom:15px;
+                }
+
+                .bookstore-hero p{
+                    max-width:750px;
+                    margin:0 auto;
+                    color:#666;
+                    font-size:1.1rem;
+                    line-height:1.8;
+                }
+
+                .book-search{
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    margin-bottom:50px;
+                }
+
+                .book-search input{
+                    width:450px;
+                    max-width:90%;
+                    padding:15px 20px;
+                    border:2px solid #d9d9d9;
+                    border-radius:40px;
+                    font-size:16px;
+                    outline:none;
+                    transition:0.3s;
+                }
+
+                .book-search input:focus{
+                    border-color:#5d8c57;
+                    box-shadow:0 0 10px rgba(93,140,87,.2);
+                }
+
+                #search-message{
+                    margin-top:15px;
+                    color:#666;
+                }
+
+                .section-title{
+                    text-align:center;
+                    color:#2f5233;
+                    font-size:2rem;
+                    margin-bottom:40px;
+                }
+
+                /*==========================
+                        BOOK GRID
+                ==========================*/
+
+                .book-grid{
+                    width:90%;
+                    max-width:1300px;
+                    margin:auto;
+
+                    display:grid;
+                    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+                    gap:35px;
+
+                    padding-bottom:60px;
+                }
+
+                /*==========================
+                        BOOK CARD
+                ==========================*/
+
+                .book-card{
+                    background:#fff;
+                    border-radius:18px;
+                    overflow:hidden;
+
+                    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+                    transition:.3s;
+                }
+
+                .book-card:hover{
+                    transform:translateY(-10px);
+                    box-shadow:0 15px 35px rgba(0,0,0,.15);
+                }
+
+                .book-card img{
+                    width:100%;
+                    height:360px;
+                    object-fit:cover;
+
+                    transition:.3s;
+                }
+
+                .book-card:hover img{
+                    transform:scale(1.05);
+                }
+
+                .book-info{
+                    padding:22px;
+                }
+
+                .book-info h3{
+                    color:#2f5233;
+                    margin-bottom:12px;
+                    font-size:22px;
+                }
+
+                .book-author{
+                    color:#666;
+                    margin-bottom:15px;
+                    line-height:1.5;
+                }
+
+                .genre{
+                    display:inline-block;
+
+                    background:#edf7ea;
+
+                    color:#4d7746;
+
+                    padding:8px 16px;
+
+                    border-radius:25px;
+
+                    font-size:.85rem;
+
+                    font-weight:bold;
+
+                    margin-bottom:22px;
+                }
+
+                /*==========================
+                        BUTTON
+                ==========================*/
+
+                .book-card a{
+                    text-decoration:none;
+                }
+
+                .book-card button{
+                    width:100%;
+                    border:none;
+
+                    background:#5d8c57;
+
+                    color:white;
+
+                    padding:14px;
+
+                    border-radius:10px;
+
+                    font-size:15px;
+
+                    font-weight:bold;
+
+                    cursor:pointer;
+
+                    transition:.3s;
+                }
+
+                .book-card button:hover{
+                    background:#476d43;
+                }
+
+                /*==========================
+                        RESPONSIVE
+                ==========================*/
+
+                @media(max-width:768px){
+
+                    .bookstore-hero h1{
+                        font-size:2.2rem;
+                    }
+
+                    .bookstore-hero p{
+                        font-size:1rem;
+                    }
+
+                    .book-search input{
+                        width:95%;
+                    }
+
+                }
