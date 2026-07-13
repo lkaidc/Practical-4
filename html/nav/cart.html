@@ -41,7 +41,7 @@
 
         <section class="cart-items">
 
-            <article class="cart-item">
+            <article class="cart-item" data-price="899.00">
 
                 <img src="https://m.media-amazon.com/images/M/MV5BYzE1YWU2MDItMTA1ZS00YWZiLWE5ZDgtOWY5YmI0MDI4YWVmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Seven Husbands of Evelyn Hugo">
 
@@ -55,11 +55,15 @@
 
                     <h4>₱899.00</h4>
 
+                    <button type="button" class="remove-item">
+                        Remove
+                    </button>
+
                 </div>
 
             </article>
 
-            <article class="cart-item">
+            <article class="cart-item" data-price="799.00">
 
                 <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1519203520i/36336078.jpg" alt="Call Me by Your Name">
 
@@ -73,11 +77,19 @@
 
                     <h4>₱799.00</h4>
 
+                    <button type="button" class="remove-item">
+                        Remove
+                    </button>
+
                 </div>
 
             </article>
 
         </section>
+
+        <p id="empty-cart-message" class="hidden">
+            Your cart is currently empty.
+        </p>
 
         <aside class="order-summary">
 
@@ -85,19 +97,31 @@
 
             <hr>
 
-            <p>Total Items <span>2</span></p>
+            <p>
+                Total Items 
+                <span id="total-items">2</span>
+            </p>
 
-            <p>Subtotal <span>₱1,698.00</span></p>
+            <p>
+                Subtotal 
+                <span id="cart-subtotal">₱1,698.00</span>
+            </p>
 
-            <p>Shipping <span>FREE</span></p>
+            <p>
+                Shipping 
+                <span>FREE</span>
+            </p>
 
             <hr>
 
-            <h2>Total: ₱1,698.00</h2>
+            <h2>
+                Total: 
+                <span id="cart-total">₱1,698.00</span>
+            </h2>
 
-            <button>Proceed to Checkout</button>
+            <button type="button" id="checkout-button">Proceed to Checkout</button>
 
-            <button class="continue-btn">Continue Shopping</button>
+            <button type="button" id="continue-shopping" class="continue-btn">Continue Shopping</button>
 
         </aside>
 
@@ -108,6 +132,8 @@
 <footer class="footer">
     <p>&copy; 2026 LeafSpace. All Rights Reserved.</p>
 </footer>
+
+<script src="../../JS/cart.js"></script>
 
 </body>
 </html>
