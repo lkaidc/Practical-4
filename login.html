@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeafSpace | Login</title>
 
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
     <div class="login-container">
 
-        <h1>📚 LeafSpace</h1>
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="theme-toggle" type="button">
+            ☀️
+        </button>
+
+        <div class="header-logo">
+          <img src="https://scontent.fmnl17-6.fna.fbcdn.net/v/t1.15752-9/743699257_1011017335116255_7216400124669385976_n.png?stp=dst-png_s480x480&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEIPRF2Jd5PTrF1XA8Bq9AoOkBr5C1nOGQ6QGvkLWc4ZKGMwemH7Mla7khqLxFxY_wouaZgIEjDofo-AGZD_utK&_nc_ohc=KHIFXvkhn8IQ7kNvwF45Ker&_nc_oc=Ado145TrhRiSxx5Vdkd_6qZf03qkXMhil_WSQelb1bo63qXOxgImiz5KyQOiyDcl24A&_nc_zt=23&_nc_ht=scontent.fmnl17-6.fna&_nc_ss=7c2a8&oh=03_Q7cD5wG-IvajsBAtzAQioofvfL0o_XTCk3B77XzBrMUehbaynw&oe=6A7C7AD2" alt="LeafSpace Logo" class="logo"></div>
+
+        <h1>LeafSpace</h1>
         <p>Hi! Welcome to LeafSpace!</p>
         <p>Please login your existing account!</p>
-        
+
         <form action="login.php" method="POST">
 
             <div class="input-group">
@@ -45,7 +54,7 @@
                     Remember Me
                 </label>
 
-                <a href="#">Forgot Password?</a>
+                
 
             </div>
 
@@ -60,7 +69,7 @@
 
     </div>
 
-  <script src="login.js"></script>
+    <script src="login.js"></script>
 
 </body>
 </html>
