@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeafSpace</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="../../CSS/style.css">
 </head>
 <body>
 
@@ -36,18 +36,21 @@
 
         <h3>Chapter 1</h3>
 
-        <p>
-            bawal copyright
+        <p id="page-content">
+            This is the first page of the online reader demonstration.
+        </p>
+
+        <p id="placeholder-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsum accusantium quod omnis tenetur nostrum, facilis autem cupiditate veritatis vel fuga perferendis ut eaque laborum. Magni accusantium ipsa vitae expedita tenetur iure maxime voluptas non eaque! Aperiam, eveniet deleniti, nihil cupiditate quaerat nulla autem in repellendus molestias voluptates recusandae impedit rem reiciendis tempora, consectetur doloremque fugiat ea iste eos iusto totam expedita ipsa blanditiis eum. Ipsa assumenda perspiciatis et consequatur facilis. Perspiciatis laudantium perferendis soluta? A quam dolor maxime consequuntur repellendus officiis! A perspiciatis maxime dicta ea eum. Odit debitis consequatur labore id facilis quaerat veritatis quae ex quod aliquid!
         </p>
 
     </section>
 
-    <nav>
-        <button>◀ Previous Page</button>
+    <nav class = "reader-controls">
+        <button type="button" id="previous-page">◀ Previous Page</button>
 
-        <span>Page 1 of 20</span>
+        <span id="page-number">Page 1 of 20</span>
 
-        <button>Next Page ▶</button>
+        <button type="button" id="next-page">Next Page ▶</button>
     </nav>
 
 </main>
@@ -56,6 +59,8 @@
     <p>&copy; 2026 LeafSpace</p>
     
 </footer>
+
+<script src="../../JS/reader.js"></script>
 
 </body>
 </html>

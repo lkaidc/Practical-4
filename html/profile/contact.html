@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="../../CSS/style.css">
 
+</head>
+
     <header>
     <div class="logo">
             <a href="index.html">
@@ -30,7 +32,7 @@
      
     </header>
 
-</head>
+
 <body>
     <main class="main-content">
     <h1><strong>Contact LeafSpace</strong></h1>
@@ -44,14 +46,73 @@
                     <li><a href="#">Instagram</a></li>
                 </ul>
         </div>
+
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+
+            <form id="contact-form" novalidate>
+
+                <div class="input-group">
+                    <label for="contact-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contact-name"
+                        name="name"
+                        placeholder="Enter your full name"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="contact-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="contact-email"
+                        name="email"
+                        placeholder="Enter your email address"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="contact-message-input">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="contact-message-input"
+                        name="message"
+                        rows="6"
+                        placeholder="Enter your message"
+                    ></textarea>
+                </div>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+                <p
+                    id="contact-form-message"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+        </section>
     </main>
+
     <footer class="footer">
         <p>&copy; 2026 LeafSpace. All rights reserved.</p>
         
         <nav>
             <a href="about.html">About Us</a>
-            <a href="../profile/contact.html">Contact</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </footer>
+
+    <script src="../../JS/contact.js"></script>
 </body>
 </html>
