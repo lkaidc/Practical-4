@@ -1,0 +1,170 @@
+:root {
+    --bg: #0E1208;
+    --card: #1C2413;
+    --primary: #3F5910;
+    --primary-hover: #567A16;
+    --accent: #8DB255;
+    --text: #F7F9F2;
+    --secondary-text: #C6D2B7;
+    --border: #364227;
+    --input-bg: #242E1A;
+}
+
+/* Light Mode */
+body.light-mode {
+    --bg: #EEF4E7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Logo */
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.logo:hover {
+    transform: scale(1.03);
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+.login-container {
+    position: relative;
+    width: 400px;
+    padding: 30px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.login-container h1 {
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-container p {
+    color: var(--secondary-text);
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background: var(--input-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: var(--accent);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.options a,
+.register a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.options a:hover,
+.register a:hover {
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: var(--primary-hover);
+}
+
+.register {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--secondary-text);
+}
+
+/* Theme Toggle */
+
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--primary);
+    color: white;
+
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--primary-hover);
+    transform: scale(1.05);
+}
