@@ -4,84 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeafSpace</title>
+    
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
-<body>
+<body data-theme="light">
     <header>
-     <h1>LeafSpace</h1>
-     
-     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="books/bookstore.html">Bookstore</a></li>
-            <li><a href="library.html">Library</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="settings.html">Settings</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/clearlogo.png" alt="LeafSpace Logo" width="100" height="100">
+            </a>
+        </div>
+         
+    <nav class="navigation">
+            <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="html/books/bookstore.html">Bookstore</a></li>
+        <li><a href="html/nav/library.html">Library</a></li>
+        <li><a href="html/nav/cart.html">Cart</a></li>
+        <li><a href="html/profile/profile.html">Profile</a></li>
+        <li><a href="html/nav/settings.html">Settings</a></li>
+        <li><a href="html/nav/login.html">Login</a></li>
+        <li><a href="html/nav/register.html">Register</a></li>
         </ul>
-     </nav>
+    </nav>
 
     </header>
 
-    <main>
+    <main class="main-content">
 
-        <section>
+        <section class="hero-section">
             <h2>Discover New Books</h2>
 
             <p>Browse books, buy your favorites, and read them online.</p>
 
-            <a href="bookstore.html">Browse Books</a>
+            <a href="html/books/bookstore.html">Browse Books</a>
         </section>
 
-        <section>
+        <section class="featured-books">
             <h2>Featured Books</h2>
 
-            <article>
-                <h3>Book Title</h3>
-                <p>Author Name</p>
-                <p>₱price</p>
-                <a href="books/bookstore.html">View Book Details</a>
+            <article class="book">
+                <h3>The Seven Husbands of Evelyn Hugo</h3>
+                <img src="https://m.media-amazon.com/images/M/MV5BYzE1YWU2MDItMTA1ZS00YWZiLWE5ZDgtOWY5YmI0MDI4YWVmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Seven Husbands of Evelyn Hugo Book Cover">
+                <p>Taylor Jenkins Reid</p>
+                <p>₱899</p>
+                <a href="/html/books/book.html">View Book Details</a>
             </article>
 
-            <article>
-                <h3>Book Title</h3>
-                <p>Author Name</p>
-                <p>₱price</p>
-                <a href="books/bookstore.html">View Book Details</a>
+            <article class="book">
+                <h3>Call Me by Your Name</h3>
+                <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1519203520i/36336078.jpg" alt="Call Me By Your Name Book Cover">
+                <p>André Aciman</p>
+                <p>₱799.00</p>
+                <a href="/html/books/book2.html">View Book Details</a>
             </article>
 
-            <article>
+            <article class="book">
                 <h3>Book Title</h3>
+                <img src="https://m.media-amazon.com/images/I/71eY4ouKL9L._UF1000,1000_QL80_.jpg" alt="The Secret History Book Cover">
                 <p>Author Name</p>
                 <p>₱price</p>
-                <a href="books/bookstore.html">View Book Details</a>
+                <a href="/html/books/book3.html">View Book Details</a>
             </article>
 
         </section>
 
-        <section>
+        <section class="book-categories">
 
             <h2>Book Categories</h2>
 
             <ul>
-                <li><a href="books/bookstore.html">Fiction</a></li>
-                <li><a href="books/bookstore.html">Non-Fiction</a></li>
-                <li><a href="books/bookstore.html">Sci-Fi</a></li>
-                <li><a href="books/bookstore.html">Mystery</a></li>
-                <li><a href="books/bookstore.html">Romance</a></li>
+                <li>
+                    <article class="card-category">
+                    <a href="html/books/bookstore.html">Fiction</a>
+                </li>
+                    </article>
+
+                    <article class="card-category">
+                <li>
+                    <a href="html/books/bookstore.html">Non-Fiction</a>
+                </li>
+                    </article>
+
+                    <article class="card-category">
+                <li>
+                    <a href="html/books/bookstore.html">Sci-Fi</a>
+                </li>
+                    </article>
+
+                    <article class="card-category">
+                <li>
+                    <a href="html/books/bookstore.html">Mystery</a>
+                </li>
+                    </article>
+            
             </ul>
         </section>
 
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2026 LeafSpace. All rights reserved.</p>
 
         <nav>
-            <a href="profile/about.html">About Us</a>
-            <a href="profile/contact.html">Contact</a>
+            <a href="html/profile/about.html">About Us</a>
+            <a href="html/profile/contact.html">Contact</a>
         </nav>
         
     </footer>
