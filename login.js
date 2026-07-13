@@ -1,187 +1,293 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
-  const emailInput = document.getElementById("email");
-  const passwordInput = document.getElementById("password");
-  const rememberCheckbox = document.querySelector(".remember input");
-  const forgotLink = document.querySelector(".options a");
-  const loginButton = document.querySelector('button[type="submit"]');
-  const passwordGroup = passwordInput.parentElement;
 
-  // Create a message box for user feedback
-  const messageBox = document.createElement("div");
-  messageBox.id = "login-message";
-  messageBox.style.marginTop = "12px";
-  messageBox.style.padding = "10px";
-  messageBox.style.borderRadius = "8px";
-  messageBox.style.fontSize = "0.95rem";
-  messageBox.style.display = "none";
-  form.appendChild(messageBox);
+    const form = document.querySelector("form");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const rememberCheckbox = document.querySelector(".remember input");
+    const forgotLink = document.querySelector(".options a");
+    const loginButton = document.querySelector('button[type="submit"]');
+    const passwordGroup = passwordInput.parentElement;
 
-  function showMessage(text, type = "info") {
-    messageBox.textContent = text;
-    messageBox.style.display = "block";
+    // =========================
+    // MESSAGE BOX
+    // =========================
 
-    if (type === "success") {
-      messageBox.style.background = "#d1fae5";
-      messageBox.style.color = "#065f46";
-      messageBox.style.border = "1px solid #10b981";
-    } else if (type === "error") {
-      messageBox.style.background = "#fee2e2";
-      messageBox.style.color = "#991b1b";
-      messageBox.style.border = "1px solid #ef4444";
-    } else {
-      messageBox.style.background = "#e0f2fe";
-      messageBox.style.color = "#075985";
-      messageBox.style.border = "1px solid #38bdf8";
-    }
-  }
-
-  function clearMessage() {
+    const messageBox = document.createElement("div");
+    messageBox.id = "login-message";
     messageBox.style.display = "none";
-    messageBox.textContent = "";
-  }
+    messageBox.style.marginTop = "12px";
+    messageBox.style.padding = "10px";
+    messageBox.style.borderRadius = "8px";
 
-  function isValidEmail(email) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email.trim());
-  }
+    form.appendChild(messageBox);
 
-  function isStrongPassword(password) {
-    // At least 8 characters, 1 uppercase, 1 lowercase, 1 number
-    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
-    return passwordPattern.test(password);
-  }
+    function showMessage(text, type = "info") {
+        messageBox.textContent = text;
+        messageBox.style.display = "block";
 
-  function getSavedUsers() {
-    return JSON.parse(localStorage.getItem("leafspaceUsers")) || [];
-  }
-
-  function saveRememberedEmail(email) {
-    localStorage.setItem("leafspaceRememberedEmail", email);
-  }
-
-  function loadRememberedEmail() {
-    const remembered = localStorage.getItem("leafspaceRememberedEmail");
-    if (remembered) {
-      emailInput.value = remembered;
-      rememberCheckbox.checked = true;
-    }
-  }
-
-  // Add show/hide password toggle
-  const toggleBtn = document.createElement("button");
-  toggleBtn.type = "button";
-  toggleBtn.textContent = "Show";
-  toggleBtn.style.marginTop = "8px";
-  toggleBtn.style.padding = "6px 10px";
-  toggleBtn.style.border = "none";
-  toggleBtn.style.borderRadius = "6px";
-  toggleBtn.style.cursor = "pointer";
-  toggleBtn.style.background = "#e5e7eb";
-  toggleBtn.style.color = "#111827";
-
-  passwordGroup.appendChild(toggleBtn);
-
-  toggleBtn.addEventListener("click", () => {
-    const isHidden = passwordInput.type === "password";
-    passwordInput.type = isHidden ? "text" : "password";
-    toggleBtn.textContent = isHidden ? "Hide" : "Show";
-  });
-
-  // Live validation feedback
-  emailInput.addEventListener("input", () => {
-    if (emailInput.value.trim() && !isValidEmail(emailInput.value)) {
-      showMessage("Please enter a valid email address.", "error");
-    } else {
-      clearMessage();
-    }
-  });
-
-  passwordInput.addEventListener("input", () => {
-    if (passwordInput.value && !isStrongPassword(passwordInput.value)) {
-      showMessage(
-        "Password must be at least 8 characters and include uppercase, lowercase, and a number.",
-        "error"
-      );
-    } else {
-      clearMessage();
-    }
-  });
-
-  forgotLink.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    if (!emailInput.value.trim()) {
-      showMessage("Enter your email first, then click Forgot Password.", "info");
-      emailInput.focus();
-      return;
+        if (type === "success") {
+            messageBox.style.background = "#1C2413";
+            messageBox.style.color = "#8DB255";
+            messageBox.style.border = "1px solid #8DB255";
+        } else if (type === "error") {
+            messageBox.style.background = "#2A1414";
+            messageBox.style.color = "#EF4444";
+            messageBox.style.border = "1px solid #EF4444";
+        } else {
+            messageBox.style.background = "#242E1A";
+            messageBox.style.color = "#C6D2B7";
+            messageBox.style.border = "1px solid #364227";
+        }
     }
 
-    if (isValidEmail(emailInput.value)) {
-      showMessage(
-        "Password reset requested. In a real system, a reset link would be sent to your email.",
-        "success"
-      );
-    } else {
-      showMessage("Please type a valid email first.", "error");
-      emailInput.focus();
-    }
-  });
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    clearMessage();
-
-    const email = emailInput.value.trim();
-    const password = passwordInput.value;
-
-    if (!email || !password) {
-      showMessage("Please fill in both email and password.", "error");
-      return;
+    function clearMessage() {
+        messageBox.style.display = "none";
+        messageBox.textContent = "";
     }
 
-    if (!isValidEmail(email)) {
-      showMessage("Please enter a valid email address.", "error");
-      emailInput.focus();
-      return;
+    // =========================
+    // VALIDATION
+    // =========================
+
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
     }
 
-    if (!isStrongPassword(password)) {
-      showMessage(
-        "Password must be at least 8 characters and include uppercase, lowercase, and a number.",
-        "error"
-      );
-      passwordInput.focus();
-      return;
+    function isStrongPassword(password) {
+        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password);
     }
 
-    // Check against registered users saved from your register page
-    const users = getSavedUsers();
-    const matchedUser = users.find(
-      (user) => user.email === email && user.password === password
-    );
+    // =========================
+    // LOCAL STORAGE
+    // =========================
 
-    if (!matchedUser) {
-      showMessage("Invalid email or password. Please try again.", "error");
-      return;
+    function getSavedUsers() {
+        return JSON.parse(localStorage.getItem("leafspaceUsers")) || [];
     }
 
-    if (rememberCheckbox.checked) {
-      saveRememberedEmail(email);
-    } else {
-      localStorage.removeItem("leafspaceRememberedEmail");
+    function saveRememberedEmail(email) {
+        localStorage.setItem("leafspaceRememberedEmail", email);
     }
 
-    showMessage("Login successful! Redirecting to LeafSpace...", "success");
+    function loadRememberedEmail() {
+        const savedEmail = localStorage.getItem("leafspaceRememberedEmail");
 
-    loginButton.disabled = true;
-    loginButton.textContent = "Logging in...";
+        if (savedEmail) {
+            emailInput.value = savedEmail;
+            rememberCheckbox.checked = true;
+        }
+    }
 
-    setTimeout(() => {
-      window.location.href = "bookstore.html";
-    }, 1200);
-  });
+    // =========================
+    // PASSWORD TOGGLE
+    // =========================
 
-  loadRememberedEmail();
+    const toggleBtn = document.createElement("button");
+
+    toggleBtn.type = "button";
+    toggleBtn.textContent = "👁 Show";
+
+    toggleBtn.style.marginTop = "8px";
+    toggleBtn.style.padding = "8px 12px";
+    toggleBtn.style.background = "#3F5910";
+    toggleBtn.style.color = "#F7F9F2";
+    toggleBtn.style.border = "1px solid #364227";
+    toggleBtn.style.borderRadius = "8px";
+    toggleBtn.style.cursor = "pointer";
+
+    passwordGroup.appendChild(toggleBtn);
+
+    toggleBtn.addEventListener("click", () => {
+        const hidden = passwordInput.type === "password";
+
+        passwordInput.type = hidden ? "text" : "password";
+        toggleBtn.textContent = hidden ? "🙈 Hide" : "👁 Show";
+    });
+
+    // =========================
+    // LIVE VALIDATION
+    // =========================
+
+    emailInput.addEventListener("input", () => {
+
+        if (emailInput.value.trim() && !isValidEmail(emailInput.value)) {
+            showMessage("Please enter a valid email address.", "error");
+        } else {
+            clearMessage();
+        }
+
+    });
+
+    passwordInput.addEventListener("input", () => {
+
+        if (
+            passwordInput.value &&
+            !isStrongPassword(passwordInput.value)
+        ) {
+            showMessage(
+                "Password must contain at least 8 characters, uppercase, lowercase, and a number.",
+                "error"
+            );
+        } else {
+            clearMessage();
+        }
+
+    });
+
+    // =========================
+    // FORGOT PASSWORD
+    // =========================
+
+    if (forgotLink) {
+
+        forgotLink.addEventListener("click", (e) => {
+
+            e.preventDefault();
+
+            const email = emailInput.value.trim();
+
+            if (!email) {
+                showMessage(
+                    "Enter your email first before requesting a password reset.",
+                    "info"
+                );
+                emailInput.focus();
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                showMessage(
+                    "Please enter a valid email address.",
+                    "error"
+                );
+                emailInput.focus();
+                return;
+            }
+
+            showMessage(
+                "Password reset link would be sent to your email.",
+                "success"
+            );
+
+        });
+
+    }
+
+    // =========================
+    // LOGIN
+    // =========================
+
+    form.addEventListener("submit", (e) => {
+
+        e.preventDefault();
+
+        clearMessage();
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        if (!email || !password) {
+            showMessage(
+                "Please fill in both email and password.",
+                "error"
+            );
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            showMessage(
+                "Please enter a valid email address.",
+                "error"
+            );
+            return;
+        }
+
+        const users = getSavedUsers();
+
+        const matchedUser = users.find(
+            user =>
+                user.email === email &&
+                user.password === password
+        );
+
+        if (!matchedUser) {
+            showMessage(
+                "Invalid email or password.",
+                "error"
+            );
+            return;
+        }
+
+        if (rememberCheckbox.checked) {
+            saveRememberedEmail(email);
+        } else {
+            localStorage.removeItem(
+                "leafspaceRememberedEmail"
+            );
+        }
+
+        showMessage(
+            "Login successful! Redirecting...",
+            "success"
+        );
+
+        loginButton.disabled = true;
+        loginButton.textContent = "Logging in...";
+
+        setTimeout(() => {
+            window.location.href = "bookstore.html";
+        }, 1200);
+
+    });
+
+    // =========================
+    // THEME SWITCHER
+    // =========================
+
+    const themeToggle = document.getElementById("themeToggle");
+
+    if (themeToggle) {
+
+        const savedTheme =
+            localStorage.getItem("leafspaceTheme");
+
+        if (savedTheme === "light") {
+            document.body.classList.add("light-mode");
+            themeToggle.textContent = "🌙";
+        } else {
+            themeToggle.textContent = "☀️";
+        }
+
+        themeToggle.addEventListener("click", () => {
+
+            document.body.classList.toggle("light-mode");
+
+            if (
+                document.body.classList.contains("light-mode")
+            ) {
+                localStorage.setItem(
+                    "leafspaceTheme",
+                    "light"
+                );
+
+                themeToggle.textContent = "🌙";
+            } else {
+                localStorage.setItem(
+                    "leafspaceTheme",
+                    "dark"
+                );
+
+                themeToggle.textContent = "☀️";
+            }
+
+        });
+
+    }
+
+    // =========================
+    // INITIALIZE
+    // =========================
+
+    loadRememberedEmail();
+
 });
-
