@@ -46,7 +46,7 @@
         <section class="settings-layout">
             <h2>Account Settings</h2>
 
-            <form>
+            <form id="accountForm">
 
                 <div>
                     <label for="username">Username</label>
@@ -56,6 +56,7 @@
                         id="username"
                         name="username"
                         value="reader67"
+                        required
                     >
                 </div>
 
@@ -67,12 +68,14 @@
                         id="email"
                         name="email"
                         value="reader67@example.com"
+                        required
                     >
                 </div>
 
                 <button class="button" type="submit">
                     Save Account Changes
                 </button>
+                <p id="accountMessage" aria-live="polite"></p>
 
             </form>
         </section>
@@ -81,7 +84,7 @@
         <section class="settings-layout">
             <h2>Change Password</h2>
 
-            <form>
+            <form id="passwordForm">
 
                 <div>
                     <label for="currentPassword">
@@ -92,22 +95,33 @@
                         type="password"
                         id="currentPassword"
                         name="currentPassword"
+                        required
                     >
                 </div>
 
                 <div>
                     <label for="newPassword">New Password</label>
 
-                    <input type="password" id="newPassword" name="newPassword">
+                    <input
+                        type="password"
+                        id="newPassword"
+                        name="newPassword"
+                    >
                 </div>
 
                 <div>
                     <label for="confirmPassword">Confirm New Password</label>
 
-                    <input type="password" id="confirmPassword" name="confirmPassword">
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                    >
                 </div>
 
-                <button class="button" type="submit">Change Password</button>
+                <button type="submit">
+                    Change Password
+                </button>
 
             </form>
         </section>
@@ -116,7 +130,7 @@
         <section class="settings-layout">
             <h2>Reading Preferences</h2>
 
-            <form>
+            <form id = readingForm>
 
                 <div>
                     <label for="fontSize">
@@ -154,7 +168,9 @@
                     </label>
                 </div>
 
-                <button class="button" type="submit">Save Reading Preferences</button>
+                <button type="submit">
+                    Save Reading Preferences
+                </button>
 
             </form>
         </section>
@@ -163,7 +179,7 @@
         <section class="settings-layout">
             <h2>Notification Settings</h2>
 
-            <form>
+            <form id="notificationForm">
 
                 <div>
                     <input type="checkbox" id="emailNotifications" name="emailNotifications">
@@ -189,9 +205,11 @@
                     </label>
                 </div>
 
-                <button class="button" type="submit">Save Notification Settings</button>
+                <button type="submit">
+                    Save Notification Settings
+                </button>
 
-            </form>
+            </form> 
         </section>
 
 
@@ -215,6 +233,8 @@
         </nav>
 
     </footer>
+
+    <script src="../../JS/settings.js"></script>
 
 </body>
 </html>

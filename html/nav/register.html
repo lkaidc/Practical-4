@@ -14,7 +14,7 @@
         <h1>LeafSpace</h1>
         <p>Welcome User! Let's create your Leaf Space account</p>
 
-        <form action="register.php" method="POST">
+        <form id = "registerForm">
 
             <div class="input-group">
                 <label for="fullname">Full Name: </label>
@@ -66,14 +66,15 @@
                     required>
             </div>
 
-            <div class="input-group"?
-               <label class="terms"> 
-                    <input type="checkbox">
+            <div class="input-group">
+               <label class="terms" for="terms"> 
+                    <input type="checkbox" id="terms" name="terms" required>
                     By clicking this, you agree upon the Terms and Conditions and Company Policy
                 </label>
             </div>
 
             <button type="submit">Create Account</button>
+            <p id="registerMessage" aria-live="polite"></p>
 
         </form>
 
@@ -83,6 +84,8 @@
         </div>
 
     </div>
+
+    <script src="../../JS/register.js"></script>
 
 </body>
 </html>

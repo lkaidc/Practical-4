@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | LeafSpace</title>
+    <link rel="stylesheet" href="../../CSS/style.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <a href="../../index.html">
+            <img src="../../images/logo.png" alt="LeafSpace Logo">
+        </a>
+    </div>
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../books/bookstore.html">Bookstore</a></li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="../profile/profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main class="checkout-container">
+
+    <h2>Checkout</h2>
+
+    <div class="checkout-grid">
+
+        <section class="checkout-form">
+
+            <h3>Shipping Information</h3>
+
+            <input type="text" placeholder="Full Name">
+
+            <input type="email" placeholder="Email Address">
+
+            <input type="text" placeholder="Phone Number">
+
+            <textarea placeholder="Complete Address"></textarea>
+
+            <h3>Payment Method</h3>
+
+            <label>
+                <input type="radio" name="payment">
+                Cash on Delivery
+            </label>
+
+            <label>
+                <input type="radio" name="payment">
+                GCash
+            </label>
+
+            <label>
+                <input type="radio" name="payment">
+                Credit / Debit Card
+            </label>
+
+        </section>
+
+        <aside class="checkout-summary">
+
+            <h3>Order Summary</h3>
+
+            <div class="summary-item">
+                <span>The Seven Husbands of Evelyn Hugo</span>
+                <span>₱899.00</span>
+            </div>
+
+            <div class="summary-item">
+                <span>Call Me by Your Name</span>
+                <span>₱799.00</span>
+            </div>
+
+            <hr>
+
+            <div class="summary-total">
+                <strong>Total</strong>
+                <strong>₱1698.00</strong>
+            </div>
+
+            <button class="place-order-btn">
+                Place Order
+            </button>
+
+            <a href="cart.html" class="back-cart">
+                ← Back to Cart
+            </a>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>&copy; 2026 LeafSpace. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
