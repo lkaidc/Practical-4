@@ -147,7 +147,7 @@ body {
                 background-color: var(--cards); 
                 padding: var(--spacing); 
                 border-radius: var(--border-radius); 
-                box-shadow: var(--shadow); 
+                
 
                 margin: var(--spacing) auto;
                 margin-left: var(--spacing);
@@ -664,7 +664,7 @@ body {
                 }
 
             }
-
+            
             /* ============================
                         CHECKOUT PAGE
                 ============================ */
