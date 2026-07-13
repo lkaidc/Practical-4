@@ -3,76 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaf Space | Register</title>
+    <title>LeafSpace | Register</title>
 
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>
 
     <div class="register-container">
 
-        <h1>LeafSpace</h1>
-        <p>Welcome User! Let's create your Leaf Space account</p>
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="theme-toggle" type="button">
+            ☀️
+        </button>
+
+        <div class="header-logo">
+          <img src="https://scontent.fmnl17-6.fna.fbcdn.net/v/t1.15752-9/743699257_1011017335116255_7216400124669385976_n.png?stp=dst-png_s480x480&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEIPRF2Jd5PTrF1XA8Bq9AoOkBr5C1nOGQ6QGvkLWc4ZKGMwemH7Mla7khqLxFxY_wouaZgIEjDofo-AGZD_utK&_nc_ohc=KHIFXvkhn8IQ7kNvwF45Ker&_nc_oc=Ado145TrhRiSxx5Vdkd_6qZf03qkXMhil_WSQelb1bo63qXOxgImiz5KyQOiyDcl24A&_nc_zt=23&_nc_ht=scontent.fmnl17-6.fna&_nc_ss=7c2a8&oh=03_Q7cD5wG-IvajsBAtzAQioofvfL0o_XTCk3B77XzBrMUehbaynw&oe=6A7C7AD2" alt="LeafSpace Logo" class="logo"></div>
+
+
+        <p>Welcome User! Let's create your LeafSpace account.</p>
 
         <form action="register.php" method="POST">
 
             <div class="input-group">
-                <label for="fullname">Full Name: </label>
+                <label for="fullname">Full Name</label>
                 <input
                     type="text"
                     id="fullname"
                     name="fullname"
                     placeholder="Enter your full name"
-                    required>
+                    required
+                >
             </div>
 
             <div class="input-group">
-                <label for="email">Email Address: </label>
+                <label for="email">Email Address</label>
                 <input
                     type="email"
                     id="email"
                     name="email"
                     placeholder="Enter your email"
-                    required>
+                    required
+                >
             </div>
 
             <div class="input-group">
-                <label for="username">Username: </label>
+                <label for="username">Username</label>
                 <input
                     type="text"
                     id="username"
                     name="username"
                     placeholder="Choose a username"
-                    required>
+                    required
+                >
             </div>
 
             <div class="input-group">
-                <label for="password">Password: </label>
+                <label for="password">Password</label>
                 <input
                     type="password"
                     id="password"
                     name="password"
                     placeholder="Create a password"
-                    required>
+                    required
+                >
             </div>
 
             <div class="input-group">
-                <label for="confirmPassword">Confirm Password: </label>
+                <label for="confirmPassword">Confirm Password</label>
                 <input
                     type="password"
                     id="confirmPassword"
                     name="confirmPassword"
                     placeholder="Confirm your password"
-                    required>
+                    required
+                >
             </div>
 
-            <div class="input-group"?
-               <label class="terms"> 
-                    <input type="checkbox">
-                    By clicking this, you agree upon the Terms and Conditions and Company Policy
+            <div class="input-group">
+                <label class="terms">
+                    <input type="checkbox" id="terms">
+                    By clicking this, you agree to the Terms and Conditions and Company Policy
                 </label>
             </div>
 
-            <button type="submit">Create Account</button>
+            <button type="submit">
+                Create Account
+            </button>
 
         </form>
 
@@ -82,6 +98,8 @@
         </div>
 
     </div>
+
+    <script src="register.js"></script>
 
 </body>
 </html>
