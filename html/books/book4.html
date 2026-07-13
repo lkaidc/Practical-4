@@ -6,7 +6,7 @@
     <title>Book Details | LeafSpace</title>
     <link rel="stylesheet" href="../../CSS/style.css">
 </head>
-<body>
+<body data-theme="light">
 
     <header>
         <div class="logo">
@@ -30,12 +30,13 @@
      </nav>
     </header>
 
-    <main>
-        <section>
-            <img src="https://m.media-amazon.com/images/I/81G2R0luQJL._AC_UF1000,1000_QL80_.jpg" alt="The Little Prince Book Cover" width="200">
-        </section>
+    <main class="main-content">
+        <section class="book-details">
+            <div class="book-img">
+                <img src="https://m.media-amazon.com/images/I/81G2R0luQJL._AC_UF1000,1000_QL80_.jpg" alt="The Little Prince Book Cover" width="200">
+            </div>
 
-         <article>
+         <article class="book-layout">
         <h2>The Little Prince</h2>
 
         <p><strong>Author:</strong> Antoine de Saint-Exupéry, Richard Howard (Translator)</p>
@@ -51,9 +52,12 @@
             A strange and wonderful parable for all ages, with super illustrations by the author.
         </p>
 
-            <button>Read Now in eLib</button>
-            <button>Order This Book</button>
-        </article>
+            <div class="button"> 
+                <a href="reader.html">Read Now in eLib</a>
+                <a href="cart.html">Order This Book</a>
+            </div>
+            </article>
+        </section>
     </main>
 
     <footer class="footer">

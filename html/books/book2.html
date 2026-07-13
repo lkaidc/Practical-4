@@ -6,7 +6,7 @@
     <title>Book Details | LeafSpace</title>
     <link rel="stylesheet" href="../../CSS/style.css">
 </head>
-<body>
+<body data-theme="light">
 
     <header>
         <div class="logo">
@@ -30,12 +30,13 @@
      </nav>
     </header>
 
-    <main>
-        <section>
+    <main class="main-content">
+        <section class="book-details">
+        <div class="book-img">
             <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1519203520i/36336078.jpg" alt="Call Me By Your Name Book Cover" width="200">
-        </section>
+        </div>
 
-         <article>
+            <article class="book-layout">
         <h2>Call Me By Your Name</h2>
 
         <p><strong>Author:</strong> André Aciman</p>
@@ -51,9 +52,12 @@
             leaves a lasting impact on both of their lives.
         </p>
 
-            <button>Read Now in eLib</button>
-            <button>Order This Book</button>
-        </article>
+            <div class="button"> 
+                <a href="reader.html">Read Now in eLib</a>
+                <a href="cart.html">Order This Book</a>
+            </div>
+            </article>
+        </section>
     </main>
 
     <footer class="footer">

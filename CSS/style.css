@@ -240,14 +240,14 @@ body {
 
                         .book-grid .book:hover,
                         .featured-books .book:hover,
-                        .current-read .current-book {
+                        .current-read .current-book:hover {
                             transform: translateY(-4px);
-                            
+                            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
                                         }
 
                         .book-grid .book img,
                         .featured-books .book img,
-                        .current-read .current-book img {
+                        .current-read .current-book img{
                             width: 140px;
                             height: 210px;
                             object-fit: cover;
@@ -326,6 +326,32 @@ body {
                             margin-bottom: 10px;
                         }
 
+                        /*BOOK LAYOUT*/
+
+                        .book-img img {
+                            width: 280px;
+                            max-width: 100%;
+
+                            border-radius: var(--border-radius);
+                            box-shadow: var(--shadow);
+                   
+                        }
+
+                        .book-layout{
+                            flex: 1;
+                            text-align: left;
+                        }
+                            .book-layout p{
+                                text-align: left;
+    
+                            }
+
+                        .book-details{
+                            display: flex;
+                            gap: var(--spacing);
+                            align-items: flex-start;
+                            padding: var(--spacing);
+                        }
 
 .banner { 
     background-color: var(--primary-button); 

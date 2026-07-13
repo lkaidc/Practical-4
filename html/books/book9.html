@@ -6,7 +6,7 @@
     <title>LeafSpace</title>
     <link rel="stylesheet" href="../../CSS/style.css">
 </head>
-<body>
+<body data-theme="light">
 
 <header>
         <div class="logo">
@@ -30,12 +30,13 @@
      </nav>
 </header>
 
-<main>
-    <section>
-        <img src="https://images-na.ssl-images-amazon.com/images/I/51kYtX4Is5L.jpg" alt="The Immortal Life of Henrietta Lacks Book Cover" width="200">
-    </section>
+<main class="main-content">
+    <section class="book-details">
+        <div class="book-img">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51kYtX4Is5L.jpg" alt="The Immortal Life of Henrietta Lacks Book Cover" width="200">
+        </div>
 
-    <article>
+    <article class="book-layout">
         <h2>Study Guide to The Immortal Life of Henrietta Lacks</h2>
 
         <p><strong>Author:</strong> Liss Ross</p>
@@ -51,12 +52,12 @@
             Lacks' remarkable story.
         </p>
 
-        <a href="reader.html">
-            <button>Read Now in eLib</button>
-        </a>
-
-        <button>Order This Book</button>
+            <div class="button"> 
+                <a href="reader.html">Read Now in eLib</a>
+                <a href="cart.html">Order This Book</a>
+            </div>
     </article>
+    </section>
 </main>
 
 <footer class="footer">

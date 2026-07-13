@@ -6,7 +6,7 @@
     <title>LeafSpace</title>
     <link rel="stylesheet" href="../../CSS/style.css">
 </head>
-<body>
+<body data-theme="light">
 
 <header>
         <div class="logo">
@@ -30,12 +30,13 @@
      </nav>
 </header>
 
-<main>
-    <section>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn5rQLKi7YFhnRx_HA7LcCxDjL2fBmHa39mKJEmVJM7dMnVOtouAhV8BK7&s=10" alt="Summary: Sapiens Book Cover" width="200">
-    </section>
+<main class="main-content">
+    <section class="book-details">
+        <div class="book-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn5rQLKi7YFhnRx_HA7LcCxDjL2fBmHa39mKJEmVJM7dMnVOtouAhV8BK7&s=10" alt="Summary: Sapiens Book Cover" width="200">
+        </div>
 
-    <article>
+    <article class="book-layout">
         <h2>Summary: Sapiens: A Brief History of Humankind</h2>
 
         <p><strong>Author:</strong> Noah Fran</p>
@@ -51,12 +52,12 @@
             thousands of years.
         </p>
 
-        <a href="reader.html">
-            <button>Read Now in eLib</button>
-        </a>
-
-        <button>Order This Book</button>
+            <div class="button"> 
+                <a href="reader.html">Read Now in eLib</a>
+                <a href="cart.html">Order This Book</a>
+            </div>
     </article>
+    </section>
 </main>
 
 <footer class="footer">

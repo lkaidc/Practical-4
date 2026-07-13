@@ -6,7 +6,7 @@
     <title>LeafSpace</title>
     <link rel="stylesheet" href="../../CSS/style.css">
 </head>
-<body>
+<body data-theme="light">
 
     <header>
         <div class="logo">
@@ -30,12 +30,13 @@
      </nav>
     </header>
 
-    <main>
-        <section>
-            <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Hyperion_cover.jpg" alt="Hyperion Book Cover" width="200">
-        </section>
+    <main class="main-content">
+        <section class="book-details">
+            <div class="book-img">
+                <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Hyperion_cover.jpg" alt="Hyperion Book Cover" width="200">
+            </div>
 
-        <article>
+        <article class="book-layout">
             <h2>Hyperion</h2>
 
             <p><strong>Author:</strong> Dan Simmons</p>
@@ -50,12 +51,12 @@
                 that may hold the key to humanity's future.
             </p>
 
-            <a href="reader.html">
-                <button>Read Now in eLib</button>
-            </a>
-
-            <button>Order This Book</button>
+            <div class="button"> 
+                <a href="reader.html">Read Now in eLib</a>
+                <a href="cart.html">Order This Book</a>
+            </div>
         </article>
+        </section>
     </main>
 
     <footer class="footer">
