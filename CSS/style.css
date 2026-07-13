@@ -123,7 +123,45 @@ body {
                 transform: scale(1.05);
                     }
 
+            .settings{ 
+    background-color: var(--cards); 
+    padding: var(--spacing); 
+    border-radius: var(--border-radius); 
+    box-shadow: var(--shadow); 
 
+    margin: var(--spacing) auto;
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+    align-items: left;
+    text-align: left;
+}           
+            .settings-layout {
+        
+                flex: 1;
+                border: none;
+                outline: none;
+
+                font-weight: 15px;
+                font-family: var(--font-main);
+
+                background-color: var(--cards); 
+                padding: var(--spacing); 
+                border-radius: var(--border-radius); 
+                box-shadow: var(--shadow); 
+
+                margin: var(--spacing) auto;
+                margin-left: var(--spacing);
+                margin-right: var(--spacing);
+                align-items: left;
+                text-align: left;
+            
+
+                            display: flex;
+                            gap: var(--spacing);
+
+            }
+
+.settings-layout,
 .main-content,
 .profile-info,
 .contact-info,
@@ -402,7 +440,8 @@ body {
                             font-family: var(--font-main);
                         }
 
-                    .profile-info button{
+                    .profile-info button,
+                    .settings-layout button{
                             border: none;
                             outline: none;
                             padding: 10px 20px;

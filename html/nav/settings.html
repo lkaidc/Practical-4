@@ -13,7 +13,7 @@
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="images/clearlogo.png" alt="LeafSpace Logo" width="100" height="100">
+                <img src="images/clearlogo.png" alt="LeafSpace Logo">
             </a>
         </div>
          
@@ -35,7 +35,7 @@
 
     </header>
 
-    <main class="main-content">
+    <main class="settings">
 
         <section>
         <h2>Settings</h2>
@@ -43,7 +43,7 @@
         <p>Manage your account settings and reading preferences.</p>
         </section>
 
-        <section>
+        <section class="settings-layout">
             <h2>Account Settings</h2>
 
             <form>
@@ -78,7 +78,7 @@
         </section>
 
 
-        <section>
+        <section class="settings-layout">
             <h2>Change Password</h2>
 
             <form>
@@ -96,38 +96,24 @@
                 </div>
 
                 <div>
-                    <label for="newPassword">
-                        New Password
-                    </label>
+                    <label for="newPassword">New Password</label>
 
-                    <input
-                        type="password"
-                        id="newPassword"
-                        name="newPassword"
-                    >
+                    <input type="password" id="newPassword" name="newPassword">
                 </div>
 
                 <div>
-                    <label for="confirmPassword">
-                        Confirm New Password
-                    </label>
+                    <label for="confirmPassword">Confirm New Password</label>
 
-                    <input
-                        type="password"
-                        id="confirmPassword"
-                        name="confirmPassword"
-                    >
+                    <input type="password" id="confirmPassword" name="confirmPassword">
                 </div>
 
-                <button type="submit">
-                    Change Password
-                </button>
+                <button class="button" type="submit">Change Password</button>
 
             </form>
         </section>
 
 
-        <section>
+        <section class="settings-layout">
             <h2>Reading Preferences</h2>
 
             <form>
@@ -168,25 +154,19 @@
                     </label>
                 </div>
 
-                <button type="submit">
-                    Save Reading Preferences
-                </button>
+                <button class="button" type="submit">Save Reading Preferences</button>
 
             </form>
         </section>
 
 
-        <section>
+        <section class="settings-layout">
             <h2>Notification Settings</h2>
 
             <form>
 
                 <div>
-                    <input
-                        type="checkbox"
-                        id="emailNotifications"
-                        name="emailNotifications"
-                    >
+                    <input type="checkbox" id="emailNotifications" name="emailNotifications">
 
                     <label for="emailNotifications">
                         Receive email notifications
@@ -194,11 +174,7 @@
                 </div>
 
                 <div>
-                    <input
-                        type="checkbox"
-                        id="bookRecommendations"
-                        name="bookRecommendations"
-                    >
+                    <input type="checkbox" id="bookRecommendations" name="bookRecommendations">
 
                     <label for="bookRecommendations">
                         Receive book recommendations
@@ -206,35 +182,25 @@
                 </div>
 
                 <div>
-                    <input
-                        type="checkbox"
-                        id="saleNotifications"
-                        name="saleNotifications"
-                    >
+                    <input type="checkbox" id="saleNotifications" name="saleNotifications">
 
                     <label for="saleNotifications">
                         Receive sale and discount notifications
                     </label>
                 </div>
 
-                <button type="submit">
-                    Save Notification Settings
-                </button>
+                <button class="button" type="submit">Save Notification Settings</button>
 
             </form>
         </section>
 
 
-        <section>
+        <section class="settings-layout">
             <h2>Account Actions</h2>
 
-            <button type="button">
-                Log Out
-            </button>
+            <button class="button" type="button">Log Out</button>
 
-            <button type="button">
-                Delete Account
-            </button>
+            <button class="button" type="button">Delete Account</button>
         </section>
 
     </main>
