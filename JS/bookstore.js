@@ -2,7 +2,7 @@ const searchInput =
     document.getElementById("book-search-input");
 
 const books =
-    document.querySelectorAll(".book");
+    document.querySelectorAll(".book-card");
 
 const searchMessage =
     document.getElementById("search-message");

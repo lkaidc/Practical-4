@@ -81,9 +81,7 @@ checkoutButton.addEventListener("click", function () {
     if (remainingItems.length === 0) {
         alert("Your shopping cart is empty.");
     } else {
-        alert(
-            "Checkout is ready for demonstration."
-        );
+        window.location.href = "checkout.html";
     }
 });
 
