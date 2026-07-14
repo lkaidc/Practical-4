@@ -35,50 +35,77 @@
 
 <main class="reader-container">
 
-    <h1 class="reader-book-title">
-        The Seven Husbands of Evelyn Hugo
-    </h1>
+    <div class="reader-header">
 
-    <h2 class="reader-chapter">
-        Chapter 1
-    </h2>
+        <h1 class="reader-book-title">
+            LeafSpace Reader
+        </h1>
 
-    <div class="reader-info">
-        <span>Reading Demo</span>
-        <span>20 Pages</span>
+        <h2 class="reader-chapter">
+            Reading Preview
+        </h2>
+
+        <div class="reader-info">
+            <span>Digital Library</span>
+            <span>Sample Chapter</span>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
     </div>
 
-    <div class="progress-bar">
-        <div class="progress"></div>
-    </div>
-
-    <div class="reader-text">
+    <section class="reader-paper">
 
         <p id="page-content">
-            This is the first page of the online reader demonstration.
+            Welcome to the LeafSpace Reader.
         </p>
 
         <p id="placeholder-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsum accusantium quod omnis tenetur nostrum, facilis autem cupiditate veritatis vel fuga perferendis ut eaque laborum. Magni accusantium ipsa vitae expedita tenetur iure maxime voluptas non eaque! Aperiam, eveniet deleniti, nihil cupiditate quaerat nulla autem in repellendus molestias voluptates recusandae impedit rem reiciendis tempora, consectetur doloremque fugiat ea iste eos iusto totam expedita ipsa blanditiis eum. Ipsa assumenda perspiciatis et consequatur facilis. Perspiciatis laudantium perferendis soluta? A quam dolor maxime consequuntur repellendus officiis! A perspiciatis maxime dicta ea eum. Odit debitis consequatur labore id facilis quaerat veritatis quae ex quod aliquid!
+            This page demonstrates how books can be read through the LeafSpace
+            e-Library. The content displayed here serves as a reading preview
+            for users before they decide to purchase or continue reading a book.
+            The actual implementation would dynamically display the selected
+            book's content.
+
+            <br><br>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc,
+            vitae feugiat sapien sapien sit amet lorem. Curabitur malesuada
+            libero vel augue consequat, sed viverra sapien gravida. Vivamus
+            vestibulum, lectus vel interdum viverra, mauris nunc tincidunt
+            ipsum, sed consequat libero nisi vel risus.
+
+            <br><br>
+
+            This reading page is intended as a prototype for the LeafSpace
+            application and showcases the user interface of an online book
+            reader.
         </p>
 
-    </div>
+    </section>
 
-    <div class="reader-page">
-        <span id="page-number">
-            Page 1 of 20
-        </span>
-    </div>
+    <div class="reader-bottom">
 
-    <div class="reader-controls">
+        <div class="reader-page">
+            <span id="page-number">
+                Page 1 of 20
+            </span>
+        </div>
 
-        <button type="button" id="previous-page" disabled>
-            ◀ Previous
-        </button>
+        <div class="reader-controls">
 
-        <button type="button" id="next-page">
-            Next ▶
-        </button>
+            <button id="previous-page" disabled>
+                ◀ Previous
+            </button>
+
+            <button id="next-page">
+                Next ▶
+            </button>
+
+        </div>
 
     </div>
 
@@ -89,7 +116,6 @@
 </footer>
 
 <script src="../../JS/reader.js"></script>
-<script src="../../JS/active-nav.js"></script>
 
 </body>
 </html>
