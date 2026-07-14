@@ -902,7 +902,7 @@ body {
                         BOOK CARD
                 ==========================*/
 
-                .book-card{
+                .book-grid .book{
                     background:#fff;
                     border-radius:18px;
                     overflow:hidden;
@@ -1012,6 +1012,140 @@ body {
 
                     .book-search input{
                         width:95%;
+                    }
+
+                }
+
+                /* ==========================================
+                READER PAGE
+                ========================================== */
+
+                .reader-container{
+                    width: 90%;
+                    max-width: 900px;
+                    margin: 50px auto;
+                    padding: 50px;
+                    background: #ffffff;
+                    border-radius: 18px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+                }
+
+                .reader-book-title{
+                    text-align: center;
+                    font-size: 2rem;
+                    color: #2f5233;
+                    margin-bottom: 10px;
+                }
+
+                .reader-chapter{
+                    text-align: center;
+                    font-size: 1.3rem;
+                    color: #5d7c61;
+                    margin-bottom: 25px;
+                }
+
+                .reader-info{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #666;
+                    font-size: .95rem;
+                    margin-bottom: 20px;
+                }
+
+                .progress-bar{
+                    width: 100%;
+                    height: 8px;
+                    background: #e6e6e6;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    margin-bottom: 35px;
+                }
+
+                .progress{
+                    width: 5%;
+                    height: 100%;
+                    background: #5d8c59;
+                }
+
+                .reader-text{
+                    color: #333;
+                    font-size: 18px;
+                    line-height: 2;
+                    text-align: justify;
+                }
+
+                .reader-text p{
+                    margin-bottom: 20px;
+                }
+
+                .reader-page{
+                    text-align: center;
+                    margin: 35px 0 25px;
+                    font-size: 17px;
+                    font-weight: bold;
+                    color: #555;
+                }
+
+                .reader-controls{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 18px;
+                }
+
+                .reader-controls button{
+                    background: #5d8c59;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 12px 25px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: .3s ease;
+                }
+
+                .reader-controls button:hover:not(:disabled){
+                    background: #476f45;
+                    transform: translateY(-2px);
+                }
+
+                .reader-controls button:disabled{
+                    background: #cfcfcf;
+                    cursor: not-allowed;
+                }
+
+                .reader-controls button:active{
+                    transform: scale(.98);
+                }
+
+                @media (max-width:768px){
+
+                    .reader-container{
+                        width:95%;
+                        padding:30px;
+                    }
+
+                    .reader-book-title{
+                        font-size:1.6rem;
+                    }
+
+                    .reader-text{
+                        font-size:16px;
+                    }
+
+                    .reader-info{
+                        flex-direction:column;
+                        gap:10px;
+                    }
+
+                    .reader-controls{
+                        flex-direction:column;
+                    }
+
+                    .reader-controls button{
+                        width:100%;
                     }
 
                 }

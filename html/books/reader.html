@@ -3,61 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeafSpace</title>
+    <title>LeafSpace | Reader</title>
+
     <link rel="stylesheet" href="../../CSS/style.css">
 </head>
+
 <body>
 
 <header>
-        <div class="logo">
-            <a href="../../index.html">
-                <img src="../../images/clearlogo.png" alt="LeafSpace Logo">
-            </a>
-        </div>
-        <nav class="navigation">
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../books/bookstore.html">Bookstore</a></li>
-                <li><a href="../nav/library.html">Library</a></li>
-                <li><a href="../nav/cart.html">Cart</a></li>
-                <li><a href="../profile/profile.html">Profile</a></li>
-                <li><a href="../nav/settings.html">Settings</a></li>
-                <li><a href="../nav/login.html">Login</a></li>
-                <li><a href="../nav/register.html">Register</a></li>
-            </ul>
-        </nav>
+
+    <div class="logo">
+        <a href="../../index.html">
+            <img src="../../images/clearlogo.png" alt="LeafSpace Logo">
+        </a>
+    </div>
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../books/bookstore.html">Bookstore</a></li>
+            <li><a href="../nav/library.html">Library</a></li>
+            <li><a href="../nav/cart.html">Cart</a></li>
+            <li><a href="../profile/profile.html">Profile</a></li>
+            <li><a href="../nav/settings.html">Settings</a></li>
+            <li><a href="../nav/login.html">Login</a></li>
+            <li><a href="../nav/register.html">Register</a></li>
+        </ul>
+    </nav>
+
 </header>
 
-<main>
+<main class="reader-container">
 
-    <h2>The Seven Husbands of Evelyn Hugo</h2>
+    <h1 class="reader-book-title">
+        The Seven Husbands of Evelyn Hugo
+    </h1>
 
-    <section>
+    <h2 class="reader-chapter">
+        Chapter 1
+    </h2>
 
-        <h3>Chapter 1</h3>
+    <div class="reader-info">
+        <span>Reading Demo</span>
+        <span>20 Pages</span>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+
+    <div class="reader-text">
 
         <p id="page-content">
             This is the first page of the online reader demonstration.
         </p>
 
-        <p id="placeholder-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsum accusantium quod omnis tenetur nostrum, facilis autem cupiditate veritatis vel fuga perferendis ut eaque laborum. Magni accusantium ipsa vitae expedita tenetur iure maxime voluptas non eaque! Aperiam, eveniet deleniti, nihil cupiditate quaerat nulla autem in repellendus molestias voluptates recusandae impedit rem reiciendis tempora, consectetur doloremque fugiat ea iste eos iusto totam expedita ipsa blanditiis eum. Ipsa assumenda perspiciatis et consequatur facilis. Perspiciatis laudantium perferendis soluta? A quam dolor maxime consequuntur repellendus officiis! A perspiciatis maxime dicta ea eum. Odit debitis consequatur labore id facilis quaerat veritatis quae ex quod aliquid!
+        <p id="placeholder-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsum accusantium quod omnis tenetur nostrum, facilis autem cupiditate veritatis vel fuga perferendis ut eaque laborum. Magni accusantium ipsa vitae expedita tenetur iure maxime voluptas non eaque! Aperiam, eveniet deleniti, nihil cupiditate quaerat nulla autem in repellendus molestias voluptates recusandae impedit rem reiciendis tempora, consectetur doloremque fugiat ea iste eos iusto totam expedita ipsa blanditiis eum. Ipsa assumenda perspiciatis et consequatur facilis. Perspiciatis laudantium perferendis soluta? A quam dolor maxime consequuntur repellendus officiis! A perspiciatis maxime dicta ea eum. Odit debitis consequatur labore id facilis quaerat veritatis quae ex quod aliquid!
         </p>
 
-    </section>
+    </div>
 
-    <nav class = "reader-controls">
-        <button type="button" id="previous-page">◀ Previous Page</button>
+    <div class="reader-page">
+        <span id="page-number">
+            Page 1 of 20
+        </span>
+    </div>
 
-        <span id="page-number">Page 1 of 20</span>
+    <div class="reader-controls">
 
-        <button type="button" id="next-page">Next Page ▶</button>
-    </nav>
+        <button type="button" id="previous-page" disabled>
+            ◀ Previous
+        </button>
+
+        <button type="button" id="next-page">
+            Next ▶
+        </button>
+
+    </div>
 
 </main>
 
 <footer class="footer">
-    <p>&copy; 2026 LeafSpace</p>
-    
+    <p>&copy; 2026 LeafSpace. All Rights Reserved.</p>
 </footer>
 
 <script src="../../JS/reader.js"></script>
