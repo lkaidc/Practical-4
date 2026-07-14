@@ -6,7 +6,9 @@ const accountMessage = document.getElementById("accountMessage");
 
 // Password elements
 const passwordForm = document.getElementById("passwordForm");
-const currentPasswordInput = document.getElementById("currentPassword");
+
+const currentPasswordInput = document.getElementById
+("currentPassword");
 const newPasswordInput = document.getElementById("newPassword");
 const confirmPasswordInput = document.getElementById("confirmPassword");
 const passwordMessage = document.getElementById("passwordMessage");
@@ -100,12 +102,16 @@ if (accountForm !== null) {
 }
 
 // Validate the password form
-passwordForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+if (passwordForm !== null) {
+    passwordForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    const currentPassword = currentPasswordInput.value;
+    
+        const currentPassword 
+    = currentPasswordInput.value;
     const newPassword = newPasswordInput.value;
     const confirmPassword = confirmPasswordInput.value;
+    const savedPassword = localStorage.getItem("leafspacePassword");
 
     if (
         currentPassword === "" ||
@@ -114,6 +120,9 @@ passwordForm.addEventListener("submit", function (event) {
     ) {
         passwordMessage.textContent =
             "Please complete all password fields.";
+    } else if (savedPassword === null) {
+        passwordMessage.textContent =
+            "No existing password found. Please set a password first.";
     } else if (currentPassword !== savedPassword) {
         passwordMessage.textContent =
             "The current password is incorrect.";
@@ -131,7 +140,7 @@ passwordForm.addEventListener("submit", function (event) {
         passwordForm.reset();
     }
 });
-
+}
 
 // Save reading preferences
 readingForm.addEventListener("submit", function (event) {
@@ -174,3 +183,102 @@ notificationForm.addEventListener("submit", function (event) {
     notificationMessage.textContent =
         "Notification settings saved successfully.";
 });
+
+const logoutButton =
+    document.getElementById("logout-button");
+
+const deleteAccountButton =
+    document.getElementById("delete-account-button");
+
+const accountActionMessage =
+    document.getElementById("account-action-message");
+
+
+// Log out of the current account
+if (logoutButton !== null) {
+    logoutButton.addEventListener("click", function () {
+        const confirmLogout = confirm(
+            "Are you sure you want to log out?"
+        );
+
+        if (confirmLogout === true) {
+            localStorage.setItem(
+                "leafspaceLoggedIn",
+                "false"
+            );
+
+            alert("You have been logged out.");
+
+            window.location.href = "login.html";
+        } else {
+            accountActionMessage.textContent =
+                "Log out was cancelled.";
+        }
+    });
+}
+
+
+// Delete the saved account
+if (deleteAccountButton !== null) {
+    deleteAccountButton.addEventListener(
+        "click",
+        function () {
+            const confirmDelete = confirm(
+                "Are you sure you want to delete your account? This action cannot be undone."
+            );
+
+            if (confirmDelete === true) {
+                localStorage.removeItem(
+                    "leafspaceFullName"
+                );
+
+                localStorage.removeItem(
+                    "leafspaceUsername"
+                );
+
+                localStorage.removeItem(
+                    "leafspaceEmail"
+                );
+
+                localStorage.removeItem(
+                    "leafspacePassword"
+                );
+
+                localStorage.removeItem(
+                    "leafspaceBio"
+                );
+
+                localStorage.removeItem(
+                    "leafspaceLoggedIn"
+                );
+
+                localStorage.removeItem(
+                    "leafspaceFontSize"
+                );
+
+                localStorage.removeItem(
+                    "leafspaceSaveProgress"
+                );
+
+                localStorage.removeItem(
+                    "leafspaceEmailNotifications"
+                );
+
+                localStorage.removeItem(
+                    "leafspaceBookRecommendations"
+                );
+
+                localStorage.removeItem(
+                    "leafspaceSaleNotifications"
+                );
+
+                alert("Your account has been deleted.");
+
+                window.location.href = "register.html";
+            } else {
+                accountActionMessage.textContent =
+                    "Account deletion was cancelled.";
+            }
+        }
+    );
+}

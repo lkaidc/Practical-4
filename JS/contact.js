@@ -13,6 +13,7 @@ const messageInput =
 const formMessage =
     document.getElementById("contact-form-message");
 
+// Alert for 
 
 if (contactForm !== null) {
     contactForm.addEventListener("submit", function (event) {
@@ -42,4 +43,24 @@ if (contactForm !== null) {
             contactForm.reset();
         }
     });
+}
+
+const unavailableContacts =
+    document.querySelectorAll(".unavailable-contact");
+
+for (
+    let index = 0;
+    index < unavailableContacts.length;
+    index++
+) {
+    unavailableContacts[index].addEventListener(
+        "click",
+        function (event) {
+            event.preventDefault();
+
+            alert(
+                "This contact method is not available yet."
+            );
+        }
+    );
 }
