@@ -10,34 +10,30 @@
 
 <body data-theme="light">
 
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/clearlogo.png" alt="LeafSpace Logo">
-            </a>
-        </div>
-         
+<header>
+    <div class="logo">
+        <a href="../../index.html">
+            <img src="../../images/clearlogo.png" alt="LeafSpace Logo">
+        </a>
+    </div>
+
+    <nav class="navigation">
         <ul>
-        <nav class="navigation">
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../books/bookstore.html">Bookstore</a></li>
-                <li><a href="../nav/library.html">Library</a></li>
-                <li><a href="../nav/cart.html">Cart</a></li>
-                <li><a href="../profile/profile.html">Profile</a></li>
-                <li><a href="settings.html">Settings</a></li>
-                <li><a href="../nav/login.html">Login</a></li>
-                <li><a href="../nav/register.html">Register</a></li>
-            </ul>
-        </nav>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../books/bookstore.html">Bookstore</a></li>
+            <li><a href="../nav/library.html">Library</a></li>
+            <li><a href="../nav/cart.html">Cart</a></li>
+            <li><a href="../profile/profile.html">Profile</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="../nav/login.html">Login</a></li>
+            <li><a href="../nav/register.html">Register</a></li>
         </ul>
     </nav>
-
-    </header>
+</header>
 
     <main class="settings">
 
-        <section>
+        <section class="settings-header">
         <h2>Settings</h2>
 
         <p>Manage your account settings and reading preferences.</p>
@@ -86,27 +82,18 @@
 
             <form id="passwordForm">
 
-                <div>
+                <div class="setting-format"> 
                     <label for="currentPassword">
                         Current Password
                     </label>
 
-                    <input
-                        type="password"
-                        id="currentPassword"
-                        name="currentPassword"
-                        required
-                    >
+                    <input type="password" id="currentPassword" name="currentPassword" required>
                 </div>
 
                 <div>
                     <label for="newPassword">New Password</label>
 
-                    <input
-                        type="password"
-                        id="newPassword"
-                        name="newPassword"
-                    >
+                    <input type="password" id="newPassword" name="newPassword">
                 </div>
 
                 <div>
@@ -119,7 +106,7 @@
                     >
                 </div>
 
-                <button type="submit">
+                <button class="button" type="submit">
                     Change Password
                 </button>
 
@@ -130,7 +117,7 @@
         <section class="settings-layout">
             <h2>Reading Preferences</h2>
 
-            <form id = readingForm>
+            <form id = "readingForm">
 
                 <div>
                     <label for="fontSize">
@@ -155,18 +142,10 @@
                     </select>
                 </div>
 
-                <div>
-                    <input
-                        type="checkbox"
-                        id="saveProgress"
-                        name="saveProgress"
-                        checked
-                    >
-
-                    <label for="saveProgress">
-                        Automatically save reading progress
-                    </label>
-                </div>
+                        <div class="checkbox-row">
+                            <input type="checkbox" id="emailNotifications" name="emailNotifications">
+                            <label for="emailNotifications">Receive email notifications</label>
+                        </div>
 
                 <button type="submit">
                     Save Reading Preferences
@@ -181,7 +160,7 @@
 
             <form id="notificationForm">
 
-                <div>
+                <div class="checkbox-row">
                     <input type="checkbox" id="emailNotifications" name="emailNotifications">
 
                     <label for="emailNotifications">
@@ -189,7 +168,7 @@
                     </label>
                 </div>
 
-                <div>
+                <div class="checkbox-row">
                     <input type="checkbox" id="bookRecommendations" name="bookRecommendations">
 
                     <label for="bookRecommendations">
@@ -197,7 +176,7 @@
                     </label>
                 </div>
 
-                <div>
+                <div class="checkbox-row">
                     <input type="checkbox" id="saleNotifications" name="saleNotifications">
 
                     <label for="saleNotifications">
@@ -228,8 +207,8 @@
         <p>&copy; 2026 LeafSpace. All rights reserved.</p>
         
         <nav>
-            <a href="../../profile/about.html">About Us</a>
-            <a href="../../profile/contact.html">Contact</a>
+            <a href="../profile/about.html">About Us</a>
+            <a href="../profile/contact.html">Contact</a>
         </nav>
 
     </footer>

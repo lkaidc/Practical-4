@@ -109,11 +109,11 @@ body {
                 transition: transform 0.3s ease;
                     }
 
-            .navigation a.active {
-                background: var(--primary-hover);
-                color: white;
-                border-radius: var(--border-radius);
-                    }
+            .navigation a.active-nav {
+                background-color: var(--primary-button, #3f5910);
+                color: #ffffff;
+                font-weight: bold;
+                }
 
             .navigation a:hover {
                 background-color: var(--primary-hover);
@@ -123,45 +123,8 @@ body {
                 transform: scale(1.05);
                     }
 
-            .settings{ 
-    background-color: var(--cards); 
-    padding: var(--spacing); 
-    border-radius: var(--border-radius); 
-    box-shadow: var(--shadow); 
 
-    margin: var(--spacing) auto;
-    margin-left: var(--spacing);
-    margin-right: var(--spacing);
-    align-items: left;
-    text-align: left;
-}           
-            .settings-layout {
         
-                flex: 1;
-                border: none;
-                outline: none;
-
-                font-weight: 15px;
-                font-family: var(--font-main);
-
-                background-color: var(--cards); 
-                padding: var(--spacing); 
-                border-radius: var(--border-radius); 
-                
-
-                margin: var(--spacing) auto;
-                margin-left: var(--spacing);
-                margin-right: var(--spacing);
-                align-items: left;
-                text-align: left;
-            
-
-                            display: flex;
-                            gap: var(--spacing);
-
-            }
-
-.settings-layout,
 .main-content,
 .profile-info,
 .contact-info,
@@ -430,7 +393,8 @@ body {
 
 
                     .bio,
-                    .username{
+                    .username,
+                    .settings-format{
                             flex: 1;
                             border: none;
                             outline: none;
@@ -454,9 +418,76 @@ body {
 
                             }
                     
-                    form {
-                        font-family: var(--font-titles);
-                    }
+
+                         .settings-layout {
+                                width: 100%;
+                                max-width: 800px;
+
+                                margin: 30px 0;   /* remove auto */
+                                padding: 30px;
+
+                                background: var(--cards);
+                                border-radius: var(--border-radius);
+                                box-shadow: var(--shadow);
+
+                                text-align: left;
+
+                                color: var(--accent-muted);
+                        }
+                                .settings-layout form div{
+                                    display:flex;
+                                    flex-direction: column;
+                                    margin-bottom: var(--spacing);
+                                }
+                                    .settings-layout form div:class(input[type="checkbox"]){
+                                            flex-direction: row;
+                                            align-items: center;
+                                            gap: 10px;
+                                    }
+
+                                    .settings-layout input[type="checkbox"] {
+                                            width: auto;
+                                            margin: 0;
+                                                }
+
+                                    .settings-layout form div:has(input[type="checkbox"]) label {
+                                            margin-bottom: 0;
+                                            }
+
+                                                .checkbox-row {
+                                                    display: flex !important;
+                                                    flex-direction: row !important;
+                                                    align-items: center;
+                                                    gap: 10px;
+                                                        }
+
+                                                    .checkbox-row input[type="checkbox"] {
+                                                    width: auto;
+                                                    margin: 0;
+                                                        }
+
+                                                    .checkbox-row label {
+                                                    margin: 0;
+                                                        }
+
+                                .settings-layout label{
+                                    margin-bottom: var(--spacing);
+                                    font-weight: bold;
+                                }
+                
+                        .settings{
+                                width: 90%;
+                                margin: 30px;
+                        }
+
+                        .settings-header h2 {
+                            font-family: var(--font-titles);
+                            color: var(--accent-muted);
+                        }
+                            .settings-header p{
+                                font-family: var(--font-main);
+                                color: var(--text);
+                            }
 
                 
                 .contact-info ul {
