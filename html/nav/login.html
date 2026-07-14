@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeafSpace | Login</title>
+    <title>Login | LeafSpace</title>
 
+    <link rel="icon" type="image/png" href="../../images/clearlogo.png">
     <link rel="stylesheet" href="../../CSS/style.css">
 </head>
-<body>
+
+<body class="account-page" data-theme="light">
 
     <div class="login-container">
 
-        <h1>📚 LeafSpace</h1>
+        <div class="account-brand">
+            <img src="../../images/clearlogo.png" alt="LeafSpace Logo">
+            <h1>LeafSpace</h1>
+        </div>
+
+        <h1>
+            <span style="font-size: 0.8em;">Login</span>
+        </h1>
+
         <p>Hi! Welcome to LeafSpace!</p>
-        <p>Please login your existing account!</p>
+        <p>Please login to your existing account!</p>
         
-        <form id = loginForm>
+        <form id = "loginForm">
 
             <div class="input-group">
                 <label for="login-identifier">Username or Email Address</label>

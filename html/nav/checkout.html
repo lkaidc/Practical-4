@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout | LeafSpace</title>
+
+    <link rel="icon" type="image/png" href="../../images/clearlogo.png">
     <link rel="stylesheet" href="../../CSS/style.css">
 </head>
 <body>
@@ -47,24 +49,41 @@
 
             <input type="text" placeholder="Phone Number">
 
-            <textarea placeholder="Complete Address"></textarea>
+            <input type="text" placeholder="Complete Address">
 
             <h3>Payment Method</h3>
 
-            <label>
-                <input type="radio" name="payment">
-                Cash on Delivery
-            </label>
+            <div class="payment-options">
 
-            <label>
-                <input type="radio" name="payment">
-                GCash
-            </label>
+                <label class="payment-option">
+                    <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="cash-on-delivery"
+                        required
+                    >
+                    Cash on Delivery
+                </label>
 
-            <label>
-                <input type="radio" name="payment">
-                Credit / Debit Card
-            </label>
+                <label class="payment-option">
+                    <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="gcash"
+                    >
+                    GCash
+                </label>
+
+                <label class="payment-option">
+                    <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="card"
+                    >
+                    Credit / Debit Card
+                </label>
+
+</div>
 
         </section>
 
@@ -103,9 +122,14 @@
 
 </main>
 
-<footer class="footer">
-    <p>&copy; 2026 LeafSpace. All Rights Reserved.</p>
-</footer>
+        <footer class="footer">
+            <p>&copy; 2026 LeafSpace. All Rights Reserved.</p>
+
+            <a href="../profile/about.html">About Us</a>
+            <a href="../profile/contact.html">Contact</a>
+        </footer>
+
+        <script src="../../JS/place-order.js"></script>
 
 </body>
 </html>
