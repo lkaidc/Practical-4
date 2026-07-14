@@ -50,7 +50,7 @@ function updateCart() {
 
     if (remainingItems.length === 0) {
         emptyCartMessage.style.display = "block";
-        checkoutButton.disabled = true;
+        checkoutButton.disabled = false;
     } else {
         emptyCartMessage.style.display = "none";
         checkoutButton.disabled = false;
