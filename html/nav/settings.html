@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../CSS/style.css">
 </head>
 
-<body>
+<body data-theme="light">
 
     <header>
         <div class="logo">
@@ -32,7 +32,7 @@
 
     </header>
 
-    <main>
+    <main class="settings">
 
         <section>
         <h2>Settings</h2>
@@ -40,7 +40,7 @@
         <p>Manage your account settings and reading preferences.</p>
         </section>
 
-        <section>
+        <section class="settings-layout">
             <h2>Account Settings</h2>
 
             <form id="accountForm">
@@ -69,7 +69,7 @@
                     >
                 </div>
 
-                <button type="submit">
+                <button class="button" type="submit">
                     Save Account Changes
                 </button>
                 <p id="accountMessage" aria-live="polite"></p>
@@ -78,7 +78,7 @@
         </section>
 
 
-        <section>
+        <section class="settings-layout">
             <h2>Change Password</h2>
 
             <form id="passwordForm">
@@ -97,41 +97,34 @@
                 </div>
 
                 <div>
-                    <label for="newPassword">
-                        New Password
-                    </label>
+                    <label for="newPassword">New Password</label>
 
                     <input
                         type="password"
                         id="newPassword"
                         name="newPassword"
-                        required
                     >
                 </div>
 
                 <div>
-                    <label for="confirmPassword">
-                        Confirm New Password
-                    </label>
+                    <label for="confirmPassword">Confirm New Password</label>
 
                     <input
                         type="password"
                         id="confirmPassword"
                         name="confirmPassword"
-                        required
                     >
                 </div>
 
                 <button type="submit">
                     Change Password
                 </button>
-                <p id="passwordMessage" aria-live="polite"></p>
 
             </form>
         </section>
 
 
-        <section>
+        <section class="settings-layout">
             <h2>Reading Preferences</h2>
 
             <form id = readingForm>
@@ -175,23 +168,18 @@
                 <button type="submit">
                     Save Reading Preferences
                 </button>
-                <p id="readingMessage" aria-live="polite"></p>
 
             </form>
         </section>
 
 
-        <section>
+        <section class="settings-layout">
             <h2>Notification Settings</h2>
 
             <form id="notificationForm">
 
                 <div>
-                    <input
-                        type="checkbox"
-                        id="emailNotifications"
-                        name="emailNotifications"
-                    >
+                    <input type="checkbox" id="emailNotifications" name="emailNotifications">
 
                     <label for="emailNotifications">
                         Receive email notifications
@@ -199,11 +187,7 @@
                 </div>
 
                 <div>
-                    <input
-                        type="checkbox"
-                        id="bookRecommendations"
-                        name="bookRecommendations"
-                    >
+                    <input type="checkbox" id="bookRecommendations" name="bookRecommendations">
 
                     <label for="bookRecommendations">
                         Receive book recommendations
@@ -211,11 +195,7 @@
                 </div>
 
                 <div>
-                    <input
-                        type="checkbox"
-                        id="saleNotifications"
-                        name="saleNotifications"
-                    >
+                    <input type="checkbox" id="saleNotifications" name="saleNotifications">
 
                     <label for="saleNotifications">
                         Receive sale and discount notifications
@@ -225,13 +205,12 @@
                 <button type="submit">
                     Save Notification Settings
                 </button>
-                <p id="notificationMessage" aria-live="polite"></p>
 
             </form> 
         </section>
 
 
-        <section>
+        <section class="settings-layout">
             <h2>Account Actions</h2>
 
             <button type="button" id="logout-button">

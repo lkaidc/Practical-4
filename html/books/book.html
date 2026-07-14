@@ -6,7 +6,7 @@
     <title>LeafSpace</title>
     <link rel="stylesheet" href="../../CSS/style.css">
 </head>
-<body>
+<body data-theme="light">
 
     <header>
         <div class="logo">
@@ -28,12 +28,14 @@
      </nav>
     </header>
 
-    <main>
-        <section>
+    <main class="main-content">
+    
+        <section class="book-details">
+        <div class="book-img">
             <img src="https://m.media-amazon.com/images/M/MV5BYzE1YWU2MDItMTA1ZS00YWZiLWE5ZDgtOWY5YmI0MDI4YWVmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Seven Husbands of Evelyn Hugo Book Cover" width="200">
-        </section>
+        </div>
 
-         <article>
+         <article class="book-layout">
         <h2>The Seven Husbands of Evelyn Hugo</h2>
 
         <p><strong>Author:</strong> Taylor Jenkins Reid</p>
@@ -50,15 +52,13 @@
             Monique Grant.
         </p>
         
-            <a class="btn" href="reader.html">
-                Read Now
-            </a>
-
-            <a class="btn" href="../nav/cart.html">
-                Order This Book
+            <a href="reader.html">
+                <button>Read Now in eLib</button>
             </a>
             
+            <button>Order This Book</button>
         </article>
+        </section>
     </main>
 
     <footer class="footer">
